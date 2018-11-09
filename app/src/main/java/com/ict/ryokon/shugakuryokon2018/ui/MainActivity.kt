@@ -1,7 +1,8 @@
-package com.ict.ryokon.shugakuryokon2018
+package com.ict.ryokon.shugakuryokon2018.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ict.ryokon.shugakuryokon2018.R
 
 class MainActivity : AppCompatActivity() {
 
