@@ -8,10 +8,9 @@ class RollCallTargetSettingViewModel : ViewModel() {
 
     fun addTarget() {
         //TODO iikanji ni Target ga add sareta toki no syori wo kaku
-
     }
 
     fun removeTarget() {
-        //TODO iikanji ni Target ga remove sareta toki no syori wo kaku
+        //TODO iikanji ni Target ga tsuika sareta toki no syori wo kaku
     }
 }
