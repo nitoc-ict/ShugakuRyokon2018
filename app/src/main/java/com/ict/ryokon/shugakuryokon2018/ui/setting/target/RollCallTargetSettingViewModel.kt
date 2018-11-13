@@ -12,5 +12,6 @@ class RollCallTargetSettingViewModel : ViewModel() {
 
     fun removeTarget() {
         //TODO iikanji ni Target ga tsuika sareta toki no syori wo kaku
+
     }
 }
