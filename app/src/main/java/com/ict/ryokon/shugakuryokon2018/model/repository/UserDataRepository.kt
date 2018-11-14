@@ -1,5 +1,7 @@
 package com.ict.ryokon.shugakuryokon2018.model.repository
 
+import com.ict.ryokon.shugakuryokon2018.Minor
+import com.ict.ryokon.shugakuryokon2018.Name
 import com.ict.ryokon.shugakuryokon2018.UserData
 
 object UserDataRepository {
@@ -11,7 +13,7 @@ object UserDataRepository {
 
     fun findAll(): ArrayList<UserData> = userDataList
 
-    fun findByName(name: String): UserData? = userDataList.find { it.name == name }
+    fun findByName(name: Name): UserData? = userDataList.find { it.name == name }
 
-    fun findByMinor(minor: Int): UserData? = userDataList.find { it.minor == minor }
+    fun findByMinor(minor: Minor): UserData? = userDataList.find { it.minor == minor }
 }
