@@ -1,8 +1,8 @@
 package com.ict.ryokon.shugakuryokon2018.model.repository
 
-import com.ict.ryokon.shugakuryokon2018.Minor
-import com.ict.ryokon.shugakuryokon2018.Name
-import com.ict.ryokon.shugakuryokon2018.UserData
+import com.ict.ryokon.shugakuryokon2018.model.Minor
+import com.ict.ryokon.shugakuryokon2018.model.Name
+import com.ict.ryokon.shugakuryokon2018.model.UserData
 
 object UserDataRepository {
     private var userDataList: ArrayList<UserData> = arrayListOf()
