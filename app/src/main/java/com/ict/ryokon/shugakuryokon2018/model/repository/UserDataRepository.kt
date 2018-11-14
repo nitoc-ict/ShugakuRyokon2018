@@ -19,5 +19,5 @@ object UserDataRepository {
     fun findByMinor(minor: Minor): UserData? = userDataList.find { it.minor == minor }
 
     fun findByAttendanceNumber(number: AttendanceNumber): UserData? =
-        userDataList.find { it.attendanceNumber ==  number}
+        userDataList.find { it.attendanceNumber == number }
 }
