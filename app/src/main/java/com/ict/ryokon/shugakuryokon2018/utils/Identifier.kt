@@ -1,4 +1,4 @@
-package com.ict.ryokon.shugakuryokon2018
+package com.ict.ryokon.shugakuryokon2018.utils
 
 abstract class Identifier<T>(val value: T) {
 
