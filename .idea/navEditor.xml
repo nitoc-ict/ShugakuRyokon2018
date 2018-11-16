@@ -3,11 +3,16 @@
   <component name="navEditor-manualLayoutAlgorithm2">
     <option name="myPositions">
       <map>
+<<<<<<< HEAD
         <entry key="beacon_navigation.xml">
+=======
+        <entry key="debug_roll_call_target.xml">
+>>>>>>> Add debug for roll call target
           <value>
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+<<<<<<< HEAD
                   <entry key="beaconSettingFragment2">
                     <value>
                       <LayoutPositions />
@@ -24,6 +29,16 @@
                               </value>
                             </entry>
                           </map>
+=======
+                  <entry key="rollCallTargetSettingFragment2">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="40" />
+                            <option name="y" value="40" />
+                          </Point>
+>>>>>>> Add debug for roll call target
                         </option>
                       </LayoutPositions>
                     </value>
@@ -33,6 +48,7 @@
             </LayoutPositions>
           </value>
         </entry>
+<<<<<<< HEAD
         <entry key="debug_roll_call_target.xml">
           <value>
             <LayoutPositions>
@@ -48,6 +64,8 @@
             </LayoutPositions>
           </value>
         </entry>
+=======
+>>>>>>> Add debug for roll call target
         <entry key="navigation.xml">
           <value>
             <LayoutPositions>
