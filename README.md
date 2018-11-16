@@ -1,1 +1,0 @@
-# ShugakuRyokon2018
