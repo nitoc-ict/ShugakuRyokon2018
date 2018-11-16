@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
+<<<<<<< HEAD
         xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+=======
+        xmlns:android="http://schemas.android.com/apk/res/android">
+>>>>>>> gitignore is working
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+<<<<<<< HEAD
         <Switch
                 android:text="Shuri Chibana"
                 android:layout_width="350dp"
                 android:layout_height="31dp" tools:layout_editor_absoluteY="30dp"
                 tools:layout_editor_absoluteX="16dp" android:id="@+id/switch1"/>
+=======
+>>>>>>> gitignore is working
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,6 +1,7 @@
 package com.ict.ryokon.shugakuryokon2018.ui.setting.target
 
 import androidx.lifecycle.ViewModel
+<<<<<<< HEAD
 import com.ict.ryokon.shugakuryokon2018.UserData
 
 class RollCallTargetSettingViewModel : ViewModel() {
@@ -15,3 +16,7 @@ class RollCallTargetSettingViewModel : ViewModel() {
 
     }
 }
+=======
+
+class RollCallTargetSettingViewModel : ViewModel()
+>>>>>>> gitignore is working
