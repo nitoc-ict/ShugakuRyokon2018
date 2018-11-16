@@ -1,0 +1,224 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:1-21:12
+MERGED from [androidx.databinding:databinding-adapters:3.2.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/databinding-adapters-3.2.1.aar/fc512547c9e8f03c916cac7ec1a6e6bf/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:databinding-runtime:3.2.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/databinding-runtime-3.2.1.aar/6fcdc285026bcbe32e4d258671b0c2ec/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/constraintlayout-2.0.0-alpha2.aar/af330d485982684652c246b609a0ab98/AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.navigation:navigation-ui-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-ui-ktx-1.0.0-alpha06.aar/79f5e14b3d35651df28dfce11753191a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.navigation:navigation-ui:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-ui-1.0.0-alpha06.aar/2cec354c7362c07af348a545d9854654/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/material-1.0.0-rc01.aar/d54ae64fb81c098ef87b19ae97ddf49c/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.1.aar/a403ec932994bfe683f811d607f5c22f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-ktx-1.0.0-alpha06.aar/3aa58677cbd3ea39dd6b2f264f20e6c1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-runtime-ktx-1.0.0-alpha06.aar/3d9767e24829faa6db8d317b7ff2a57e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-common-ktx-1.0.0-alpha06.aar/f7409ffea6aae1f4215a551a48db2586/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.navigation:navigation-fragment:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-1.0.0-alpha06.aar/d7c718bc857e0541dee0f4a17c0053a4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-extensions-2.0.0.aar/002021fc877e1e2b8c8018c0a1d7c8c4/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-ktx-2.0.0.aar/194cb0d30cb6a47f429658fe17a92fc8/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-service-2.0.0.aar/46fac0d37bffbf0009ef798cd1446329/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0-rc01.aar/9e6a1cdb5ded93346341c5731ead6d0b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/transition-1.0.0-rc01.aar/fde2943ab8b34e037d16fb21847d813b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0.aar/283d0fac18276fb33e2b8f70d12acd87/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0.aar/341b1cf6e754d4f74e65a9dfca92f85f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/8e3b28279d6597059bd86f5ddd8c9123/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.navigation:navigation-runtime:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-runtime-1.0.0-alpha06.aar/0607db99ff17c9b4da83779f7558f572/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/902ffee2ea5f702cf28485ff12fd39b8/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/b1e3a32bfe7bfc65e58ec18607875513/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.1.aar/3b721a3ad9eb8306d442648ed421797e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/045ed31b777c0b8bbc2feb895dd0e6ab/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/855a37d2d6ee57fc5c99240443897498/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/a235b58dd83d68e2c74054ca5c57f386/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/c7ed4f6d7e21a1abe08f19bcc36491ec/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/573171ff72f25b588099033c14fef76b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/9bd362214b6358450e7ac8f9eb813e50/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/d58c37931d367d7c56fba7348a5fb1dd/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.navigation:navigation-common:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-common-1.0.0-alpha06.aar/9f2566710ed94f2a4e62828a6927e5ea/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/983de9992cf88fbf67bea45a5301b7b5/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/b2d394d94075a50cb8a2cc193c109c14/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b697e948205b2bd6e334680aedc13d2a/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/3efd2fbd9cc03c6d6fe45cb88d779030/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/fe688405318d0b1043de56845dde42b3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/3254e2c8cd6fbe74dbbf0d394d6f83a2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/5d74edf65d66833a61c76d814371b936/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0-rc01.aar/734f461f38d6fc4e1fdfbb97debb8e4a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/ab7458515b1aa9be99c3d50779e939d0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/6adff1414e2e1ebd76474d7ef648c1f6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/7217a1bd7a240d5f15ce12a7f1874b00/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/da5781c9eb739397e8130dbbc0a9e69d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/8f7832e043e5d5e71f6234f1775ed6ee/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:3:11-53
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:1-21:12
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:5:5-19:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/constraintlayout-2.0.0-alpha2.aar/af330d485982684652c246b609a0ab98/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/constraintlayout-2.0.0-alpha2.aar/af330d485982684652c246b609a0ab98/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.material:material:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/material-1.0.0-rc01.aar/d54ae64fb81c098ef87b19ae97ddf49c/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/material-1.0.0-rc01.aar/d54ae64fb81c098ef87b19ae97ddf49c/AndroidManifest.xml:22:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-extensions-2.0.0.aar/002021fc877e1e2b8c8018c0a1d7c8c4/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-extensions-2.0.0.aar/002021fc877e1e2b8c8018c0a1d7c8c4/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:22:5-28:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:22:5-28:19
+MERGED from [androidx.core:core:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/983de9992cf88fbf67bea45a5301b7b5/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/983de9992cf88fbf67bea45a5301b7b5/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b697e948205b2bd6e334680aedc13d2a/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b697e948205b2bd6e334680aedc13d2a/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/983de9992cf88fbf67bea45a5301b7b5/AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:10:13-39
+	android:label
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:8:13-45
+	android:roundIcon
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:9:13-58
+	android:icon
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:7:13-47
+	android:allowBackup
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:6:13-39
+	android:theme
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:11:13-44
+activity#com.ict.ryokon.shugakuryokon2018.ui.MainActivity
+ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:12:19-50
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:14:17-68
+	android:name
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:16:17-76
+	android:name
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:databinding-adapters:3.2.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/databinding-adapters-3.2.1.aar/fc512547c9e8f03c916cac7ec1a6e6bf/AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-adapters:3.2.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/databinding-adapters-3.2.1.aar/fc512547c9e8f03c916cac7ec1a6e6bf/AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.2.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/databinding-runtime-3.2.1.aar/6fcdc285026bcbe32e4d258671b0c2ec/AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.2.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/databinding-runtime-3.2.1.aar/6fcdc285026bcbe32e4d258671b0c2ec/AndroidManifest.xml:22:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/constraintlayout-2.0.0-alpha2.aar/af330d485982684652c246b609a0ab98/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/constraintlayout-2.0.0-alpha2.aar/af330d485982684652c246b609a0ab98/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.navigation:navigation-ui-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-ui-ktx-1.0.0-alpha06.aar/79f5e14b3d35651df28dfce11753191a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-ui-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-ui-ktx-1.0.0-alpha06.aar/79f5e14b3d35651df28dfce11753191a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-ui:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-ui-1.0.0-alpha06.aar/2cec354c7362c07af348a545d9854654/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-ui:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-ui-1.0.0-alpha06.aar/2cec354c7362c07af348a545d9854654/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/material-1.0.0-rc01.aar/d54ae64fb81c098ef87b19ae97ddf49c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/material-1.0.0-rc01.aar/d54ae64fb81c098ef87b19ae97ddf49c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.1.aar/a403ec932994bfe683f811d607f5c22f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.1.aar/a403ec932994bfe683f811d607f5c22f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-ktx-1.0.0-alpha06.aar/3aa58677cbd3ea39dd6b2f264f20e6c1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-ktx-1.0.0-alpha06.aar/3aa58677cbd3ea39dd6b2f264f20e6c1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-runtime-ktx-1.0.0-alpha06.aar/3d9767e24829faa6db8d317b7ff2a57e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-runtime-ktx-1.0.0-alpha06.aar/3d9767e24829faa6db8d317b7ff2a57e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-common-ktx-1.0.0-alpha06.aar/f7409ffea6aae1f4215a551a48db2586/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-common-ktx-1.0.0-alpha06.aar/f7409ffea6aae1f4215a551a48db2586/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-fragment:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-1.0.0-alpha06.aar/d7c718bc857e0541dee0f4a17c0053a4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-fragment:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-fragment-1.0.0-alpha06.aar/d7c718bc857e0541dee0f4a17c0053a4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-extensions-2.0.0.aar/002021fc877e1e2b8c8018c0a1d7c8c4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-extensions-2.0.0.aar/002021fc877e1e2b8c8018c0a1d7c8c4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-ktx-2.0.0.aar/194cb0d30cb6a47f429658fe17a92fc8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-ktx-2.0.0.aar/194cb0d30cb6a47f429658fe17a92fc8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-service-2.0.0.aar/46fac0d37bffbf0009ef798cd1446329/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-service-2.0.0.aar/46fac0d37bffbf0009ef798cd1446329/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0-rc01.aar/9e6a1cdb5ded93346341c5731ead6d0b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0-rc01.aar/9e6a1cdb5ded93346341c5731ead6d0b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/transition-1.0.0-rc01.aar/fde2943ab8b34e037d16fb21847d813b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/transition-1.0.0-rc01.aar/fde2943ab8b34e037d16fb21847d813b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0.aar/283d0fac18276fb33e2b8f70d12acd87/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0.aar/283d0fac18276fb33e2b8f70d12acd87/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0.aar/341b1cf6e754d4f74e65a9dfca92f85f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0.aar/341b1cf6e754d4f74e65a9dfca92f85f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/8e3b28279d6597059bd86f5ddd8c9123/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/8e3b28279d6597059bd86f5ddd8c9123/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-runtime:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-runtime-1.0.0-alpha06.aar/0607db99ff17c9b4da83779f7558f572/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-runtime:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-runtime-1.0.0-alpha06.aar/0607db99ff17c9b4da83779f7558f572/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/902ffee2ea5f702cf28485ff12fd39b8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/902ffee2ea5f702cf28485ff12fd39b8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/b1e3a32bfe7bfc65e58ec18607875513/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/b1e3a32bfe7bfc65e58ec18607875513/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.1.aar/3b721a3ad9eb8306d442648ed421797e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.1.aar/3b721a3ad9eb8306d442648ed421797e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/045ed31b777c0b8bbc2feb895dd0e6ab/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/045ed31b777c0b8bbc2feb895dd0e6ab/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/855a37d2d6ee57fc5c99240443897498/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/855a37d2d6ee57fc5c99240443897498/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/a235b58dd83d68e2c74054ca5c57f386/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/a235b58dd83d68e2c74054ca5c57f386/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/c7ed4f6d7e21a1abe08f19bcc36491ec/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/c7ed4f6d7e21a1abe08f19bcc36491ec/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/573171ff72f25b588099033c14fef76b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/573171ff72f25b588099033c14fef76b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/9bd362214b6358450e7ac8f9eb813e50/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/9bd362214b6358450e7ac8f9eb813e50/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/d58c37931d367d7c56fba7348a5fb1dd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/d58c37931d367d7c56fba7348a5fb1dd/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-common:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-common-1.0.0-alpha06.aar/9f2566710ed94f2a4e62828a6927e5ea/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-common:1.0.0-alpha06] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/jetified-navigation-common-1.0.0-alpha06.aar/9f2566710ed94f2a4e62828a6927e5ea/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/983de9992cf88fbf67bea45a5301b7b5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/983de9992cf88fbf67bea45a5301b7b5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/b2d394d94075a50cb8a2cc193c109c14/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/b2d394d94075a50cb8a2cc193c109c14/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b697e948205b2bd6e334680aedc13d2a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/b697e948205b2bd6e334680aedc13d2a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/3efd2fbd9cc03c6d6fe45cb88d779030/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/3efd2fbd9cc03c6d6fe45cb88d779030/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/fe688405318d0b1043de56845dde42b3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/fe688405318d0b1043de56845dde42b3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/3254e2c8cd6fbe74dbbf0d394d6f83a2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/3254e2c8cd6fbe74dbbf0d394d6f83a2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/5d74edf65d66833a61c76d814371b936/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/5d74edf65d66833a61c76d814371b936/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0-rc01.aar/734f461f38d6fc4e1fdfbb97debb8e4a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0-rc01] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0-rc01.aar/734f461f38d6fc4e1fdfbb97debb8e4a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/ab7458515b1aa9be99c3d50779e939d0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/ab7458515b1aa9be99c3d50779e939d0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/6adff1414e2e1ebd76474d7ef648c1f6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/6adff1414e2e1ebd76474d7ef648c1f6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/7217a1bd7a240d5f15ce12a7f1874b00/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/7217a1bd7a240d5f15ce12a7f1874b00/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/da5781c9eb739397e8130dbbc0a9e69d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/da5781c9eb739397e8130dbbc0a9e69d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/8f7832e043e5d5e71f6234f1775ed6ee/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/8f7832e043e5d5e71f6234f1775ed6ee/AndroidManifest.xml:20:5-44
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/AndroidManifest.xml
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:25:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/mitohato14/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.0.0.aar/7668d326843f213fdcc9d5ca3ecd374e/AndroidManifest.xml:24:13-79
