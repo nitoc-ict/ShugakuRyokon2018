@@ -3,6 +3,11 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.view.RollCallAdapter"/>
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -33,6 +38,7 @@
                 app:layout_constraintTop_toBottomOf="@id/attend_num"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:adapter="@{adapter}"
                 android:layout_margin="30dp"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"/>
