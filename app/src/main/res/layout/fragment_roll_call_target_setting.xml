@@ -3,7 +3,6 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <import type="android.view.View" />
 
         <variable
                 name="viewmodel"
@@ -28,7 +27,7 @@
                 android:id="@+id/targetSettingSwitch" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="16dp" app:layout_constraintHorizontal_bias="0.5"
-                android:onCheckedChanged="@{(switch, checked) -> viewmodel.onCheckedChenged(checked)}"
+                android:onCheckedChanged="@{viewmodel::onCheckedChanged}"
                 android:text="@{viewmodel.changeSwitchTest}"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
         />

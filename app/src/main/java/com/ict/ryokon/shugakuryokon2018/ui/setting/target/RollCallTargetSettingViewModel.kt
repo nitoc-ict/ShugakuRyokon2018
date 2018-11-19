@@ -1,20 +1,31 @@
 package com.ict.ryokon.shugakuryokon2018.ui.setting.target
 
+import android.util.Log
+import android.view.View
+import androidx.databinding.ObservableField
 import androidx.lifecycle.ViewModel
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 
 class RollCallTargetSettingViewModel : ViewModel() {
     lateinit var userDataList: ArrayList<UserData>
-    var changeSwitchTest: String = "off"
+    //var changeSwitchTest: String = "off"
+    var changeSwitchTest: ObservableField<String> = ObservableField("off")
 
-    fun onCheckedChenged(checked: Boolean) {
-        if (checked == true) {
-            changeSwitchTest = "on"
-            //TODO call addTarget().
-        }
-        else {
-            changeSwitchTest = "off"
-            //TODO call removeTarget().
+    fun onCheckedChanged(switch: View, checked: Boolean) {
+        Log.d("switch", "$checked")
+
+        /*when (checked) {
+            true -> changeSwitchTest = "on"
+            false -> changeSwitchTest = "off"
+        }*/
+
+        when (checked) {
+            true -> {
+                changeSwitchTest.set("on")
+            }
+            false -> {
+                changeSwitchTest.set("off")
+            }
         }
     }
     fun addTarget() {
