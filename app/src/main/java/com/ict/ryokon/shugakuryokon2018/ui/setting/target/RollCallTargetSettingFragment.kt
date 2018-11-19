@@ -1,11 +1,14 @@
 package com.ict.ryokon.shugakuryokon2018.ui.setting.target
 
-<<<<<<< HEAD
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
+import com.ict.ryokon.shugakuryokon2018.R
+import com.ict.ryokon.shugakuryokon2018.databinding.FragmentRollCallTargetSettingBinding
 
 class RollCallTargetSettingFragment : Fragment() {
     override fun onCreateView(
@@ -15,15 +18,16 @@ class RollCallTargetSettingFragment : Fragment() {
     ): View? {
         val viewModel = ViewModelProviders.of(this).get(RollCallTargetSettingViewModel::class.java)
 
-        return super.onCreateView(
+        val binding: FragmentRollCallTargetSettingBinding = DataBindingUtil.inflate(
             inflater,
+            R.layout.fragment_roll_call_target_setting,
             container,
-            savedInstanceState
+            false
         )
+        binding.also { it ->
+            it.viewmodel = viewModel
+        }
+
+        return binding.root
     }
 }
-=======
-import androidx.fragment.app.Fragment
-
-class RollCallTargetSettingFragment : Fragment()
->>>>>>> gitignore is working
