@@ -36,19 +36,13 @@ dependencies {
     implementation "android.arch.navigation:navigation-fragment-ktx:$navigation_version"
     implementation "android.arch.navigation:navigation-ui-ktx:$navigation_version"
 
-<<<<<<< HEAD
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
-
-    implementation "android.arch.lifecycle:extensions:1.1.1"
-    implementation "androidx.arch.lifecycle:lifecycle-viewmodel-ktx"
-
-=======
     //    lifecycle
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
   
->>>>>>> gitignore is working
+    //    beacon
+    implementation 'org.altbeacon:android-beacon-library:2+'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
