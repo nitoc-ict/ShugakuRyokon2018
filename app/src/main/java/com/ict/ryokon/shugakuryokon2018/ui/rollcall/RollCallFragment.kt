@@ -42,7 +42,12 @@ class RollCallFragment : Fragment() {
         super.onResume()
         val beaconManager = BeaconManager.getInstanceForApplication(context!!)
 
-        val region = Region(null, null, null, null)
+        val region = Region(
+            null,   // UniqueID
+            null,   // UUID
+            null,   // Major
+            null    // Minor
+        )
 
         beaconManager.addMonitorNotifier(object : MonitorNotifier {
             override fun didEnterRegion(region: Region) {
@@ -51,7 +56,10 @@ class RollCallFragment : Fragment() {
             override fun didExitRegion(region: Region) {
             }
 
-            override fun didDetermineStateForRegion(state: Int, region: Region) {
+            override fun didDetermineStateForRegion(
+                state: Int,
+                region: Region
+            ) {
             }
         })
         beaconManager.startMonitoringBeaconsInRegion(region)
