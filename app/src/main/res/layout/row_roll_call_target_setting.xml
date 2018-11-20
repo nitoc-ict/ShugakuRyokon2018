@@ -7,6 +7,7 @@
     <data>
 
         <variable name="userdata" type="com.ict.ryokon.shugakuryokon2018.model.UserData"/>
+        <variable name="viewmodel" type="com.ict.ryokon.shugakuryokon2018.ui.setting.target.RollCallTargetSettingViewModel"/>
 
     </data>
 
@@ -15,12 +16,45 @@
             android:layout_height="match_parent">
 
         <Switch
-                tool:text="Switch"
+                android:layout_width="67dp"
+                android:layout_height="24dp" tool:layout_editor_absoluteY="242dp"
+                android:id="@+id/switch1"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:onCheckedChanged="@{viewmodel::onCheckedChanged}"
+                app:layout_constraintHorizontal_bias="0.943"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+                android:text="@{userdata.attendanceNumber.toString()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:layout_editor_absoluteY="246dp"
+                android:id="@+id/textView"
+                android:layout_marginStart="16dp"
+                tool:text="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
                 android:text="@{userdata.name.kanji}"
-                android:layout_width="323dp"
-                android:layout_height="30dp" tool:layout_editor_absoluteY="228dp"
-                android:id="@+id/switch1" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="16dp"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:layout_editor_absoluteY="245dp"
+                tool:layout_editor_absoluteX="34dp"
+                android:id="@+id/textView2"
+                tool:text="歩下 太郎"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+                android:text="@{userdata.name.hiragana}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tool:layout_editor_absoluteY="246dp"
+                tool:layout_editor_absoluteX="103dp" android:id="@+id/textView3" tool:text="ほげ たろう"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
