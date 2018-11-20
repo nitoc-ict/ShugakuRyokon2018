@@ -6,26 +6,21 @@ import androidx.databinding.ObservableField
 import androidx.lifecycle.ViewModel
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
+import androidx.lifecycle.MutableLiveData
 
 class RollCallTargetSettingViewModel : ViewModel() {
     var userDataList: ArrayList<UserData> = UserDataRepository.findAll()
-    var changeSwitchTest: ObservableField<String> = ObservableField("off")
+    var changeSwitchTest: MutableLiveData<String> = MutableLiveData()
 
     fun onCheckedChanged(switch: View, checked: Boolean) {
         Log.d("switch", "$checked")
 
-        /*when (checked) {
-            true -> changeSwitchTest = "on"
-            false -> changeSwitchTest = "off"
-        }*/
-
         when (checked) {
             true -> {
-
-                changeSwitchTest.set("on")
+                changeSwitchTest.value = "on"
             }
             false -> {
-                changeSwitchTest.set("off")
+                changeSwitchTest.value = "off"
             }
         }
     }

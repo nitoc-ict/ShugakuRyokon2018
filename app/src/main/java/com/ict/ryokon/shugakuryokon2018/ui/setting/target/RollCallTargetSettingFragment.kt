@@ -26,6 +26,7 @@ class RollCallTargetSettingFragment : Fragment() {
         )
         binding.also { it ->
             it.viewmodel = viewModel
+            it.setLifecycleOwner(this)
         }
 
         return binding.root
