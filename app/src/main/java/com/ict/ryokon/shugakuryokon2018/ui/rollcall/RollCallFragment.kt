@@ -2,10 +2,12 @@ package com.ict.ryokon.shugakuryokon2018.ui.rollcall
 
 import android.os.Bundle
 import android.view.*
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
+import com.ict.ryokon.shugakuryokon2018.databinding.FragmentRollCallBinding
 import com.ict.ryokon.shugakuryokon2018.model.Minor
 import org.altbeacon.beacon.BeaconManager
 import org.altbeacon.beacon.MonitorNotifier
@@ -28,11 +30,14 @@ class RollCallFragment : Fragment() {
     ): View? {
         viewModel = ViewModelProviders.of(this).get(RollCallViewModel::class.java)
 
-        return super.onCreateView(
+        val binding: FragmentRollCallBinding = DataBindingUtil.inflate(
             inflater,
+            R.layout.fragment_roll_call,
             container,
-            savedInstanceState
+            false
         )
+
+        return binding.root
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
