@@ -7,6 +7,10 @@ import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
+import org.altbeacon.beacon.BeaconManager
+import org.altbeacon.beacon.MonitorNotifier
+import org.altbeacon.beacon.Region
+import androidx.navigation.fragment.findNavController
 
 class RollCallFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
@@ -32,5 +36,24 @@ class RollCallFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val beaconManager = BeaconManager.getInstanceForApplication(context!!)
+
+        val region = Region(null, null, null, null)
+
+        beaconManager.addMonitorNotifier(object : MonitorNotifier {
+            override fun didEnterRegion(region: Region) {
+            }
+
+            override fun didExitRegion(region: Region) {
+            }
+
+            override fun didDetermineStateForRegion(state: Int, region: Region) {
+            }
+        })
+        beaconManager.startMonitoringBeaconsInRegion(region)
     }
 }
