@@ -14,38 +14,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <TextView
-                tool:text="1"
-                android:text="@{userdata.attendanceNumber.toString()}"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_margin="@dimen/row_roll_call_base_margin"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:id="@+id/attend_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        <TextView
-                tool:text="ホゲホゲホゲホゲ"
+        <Switch
+                tool:text="Switch"
                 android:text="@{userdata.name.kanji}"
-                android:id="@+id/name_kanji"
-                android:layout_margin="@dimen/row_roll_call_base_margin"
-                app:layout_constraintStart_toEndOf="@id/attend_number"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        <TextView
-                tool:text="ホゲホゲホゲホゲ"
-                android:text="@{userdata.name.hiragana}"
-                android:id="@+id/name_kana"
-                android:layout_margin="@dimen/row_roll_call_base_margin"
-                app:layout_constraintStart_toEndOf="@id/name_kanji"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
+                android:layout_width="323dp"
+                android:layout_height="30dp" tool:layout_editor_absoluteY="228dp"
+                android:id="@+id/switch1" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
