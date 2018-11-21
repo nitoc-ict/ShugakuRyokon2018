@@ -94,10 +94,7 @@ class RollCallFragment : Fragment() {
         minor: Minor,
         isAttend: Boolean
     ) {
-        viewModel.userDataList.forEachIndexed {
-                index,
-                userData
-            ->
+        viewModel.userDataList.forEachIndexed { index, userData ->
             if (userData.minor == minor) {
                 viewModel.userDataList[index] = userData.copy(isAttend = isAttend)
                 return
@@ -112,5 +109,4 @@ class RollCallFragment : Fragment() {
     fun stopOnClick(view: View) {
         beaconManager?.stopMonitoringBeaconsInRegion(region)
     }
-
 }
