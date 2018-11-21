@@ -21,6 +21,7 @@ class RollCallTargetSettingAdapter(private val userDataList: List<UserData>) : R
         holder: RollCallTargetSettingViewHolder,
         position: Int
     ) {
-        holder.bind(userDataList[position])
+        val bindingModel = RollCallTargetSettingBindingModel()
+        holder.bind(bindingModel)
     }
 }

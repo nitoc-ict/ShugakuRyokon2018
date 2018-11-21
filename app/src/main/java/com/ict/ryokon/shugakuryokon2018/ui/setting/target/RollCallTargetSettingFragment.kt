@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.databinding.FragmentRollCallTargetSettingBinding
+import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class RollCallTargetSettingFragment : Fragment() {
     override fun onCreateView(
@@ -16,7 +17,7 @@ class RollCallTargetSettingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val viewModel = ViewModelProviders.of(this).get(RollCallTargetSettingViewModel::class.java)
+        val bindingModel = RollCallTargetSettingBindingModel()
 
         val binding: FragmentRollCallTargetSettingBinding = DataBindingUtil.inflate(
             inflater,
@@ -24,8 +25,10 @@ class RollCallTargetSettingFragment : Fragment() {
             container,
             false
         )
+
+        val list = UserDataRepository.findAll()
         binding.also { it ->
-            it.viewmodel = viewModel
+            it.adapter = RollCallTargetSettingAdapter(list)
             it.setLifecycleOwner(this)
         }
 

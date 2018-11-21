@@ -4,10 +4,12 @@
 
     <data>
 
-        <variable
+        <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.ui.setting.target.RollCallTargetSettingAdapter" />
+
+        <!--<variable
                 name="viewmodel"
                 type="com.ict.ryokon.shugakuryokon2018.ui.setting.target.RollCallTargetSettingViewModel" />
-        <!--<variable
+        <variable
                 name="addOnClick"
                 type="android.view.View.OnClickListener" />-->
 
@@ -39,7 +41,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-
+                android:adapter="@{adapter}"
         />
 
 

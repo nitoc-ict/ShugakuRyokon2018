@@ -2,25 +2,31 @@ package com.ict.ryokon.shugakuryokon2018.ui.setting.target
 
 import android.util.Log
 import android.view.View
-import androidx.databinding.ObservableField
-import androidx.lifecycle.ViewModel
 import com.ict.ryokon.shugakuryokon2018.model.UserData
-import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 import androidx.lifecycle.MutableLiveData
+import com.ict.ryokon.shugakuryokon2018.model.AttendanceNumber
+import com.ict.ryokon.shugakuryokon2018.model.Minor
+import com.ict.ryokon.shugakuryokon2018.model.Name
 
-class RollCallTargetSettingViewModel : ViewModel() {
-    var userDataList: ArrayList<UserData> = UserDataRepository.findAll()
+class RollCallTargetSettingBindingModel {
+    var userData: UserData = UserData(
+        name = Name("知花", "ちばな"),
+        attendanceNumber = AttendanceNumber(1),
+        minor = Minor(1),
+        isRollCallTarget = true,
+        isAttend = true
+    )
     var changeSwitchTest: MutableLiveData<String> = MutableLiveData()
 
     fun onCheckedChanged(switch: View, checked: Boolean) {
-        Log.d("switch", "$checked")
+        Log.d("isAttend", "${userData.isAttend}")
 
         when (checked) {
             true -> {
-                changeSwitchTest.value = "on"
+                userData.isAttend = true
             }
             false -> {
-                changeSwitchTest.value = "off"
+                userData.isAttend = false
             }
         }
     }

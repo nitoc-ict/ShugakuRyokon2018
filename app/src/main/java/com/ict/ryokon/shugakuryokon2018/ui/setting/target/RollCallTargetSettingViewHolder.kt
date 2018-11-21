@@ -8,8 +8,8 @@ import com.ict.ryokon.shugakuryokon2018.model.UserData
 
 class RollCallTargetSettingViewHolder(private val binding: RowRollCallTargetSettingBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(userData: UserData) {
-        binding.userdata = userData
+    fun bind(bindingModel: RollCallTargetSettingBindingModel) {
+        binding.bindingmodel = bindingModel
     }
 
     fun unbind() {
