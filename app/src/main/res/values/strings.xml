@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">ShugakuRyokon2018</string>
+
     <string name="menu_roll_call_target_setting">点呼対象者切り替え</string>
     <string name="menu_beacon_setting">ビーコン設定</string>
+
+    <string name="bluetooth_alert_title">確認</string>
+    <string name="bluetooth_alert_body">Bluetooth機能をONにしました</string>
+    <string name="bluetooth_alert_ok">OK</string>
 </resources>

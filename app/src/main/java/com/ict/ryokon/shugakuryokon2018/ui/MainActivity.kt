@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         if (!bluetoothAdapter.isEnabled) {
             AlertDialog.Builder(this)
-                .setTitle("確認")
-                .setMessage("Bluetooth機能をONにしました")
-                .setPositiveButton("OK") { _, _ ->
+                .setTitle(getString(R.string.bluetooth_alert_title))
+                .setMessage(getString(R.string.bluetooth_alert_body))
+                .setPositiveButton(getString(R.string.bluetooth_alert_ok)) { _, _ ->
                 }
                 .show()
             bluetoothAdapter.enable()
