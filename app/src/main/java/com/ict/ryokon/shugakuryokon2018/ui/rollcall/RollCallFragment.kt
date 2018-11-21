@@ -5,6 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
+import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 import org.altbeacon.beacon.BeaconManager
@@ -78,5 +79,17 @@ class RollCallFragment : Fragment() {
             }
         })
         beaconManager.startMonitoringBeaconsInRegion(region)
+    }
+
+    fun changeRollCallStateByMinor(
+        minor: Minor,
+        isAttend: Boolean
+    ) {
+        userDataArrayList.forEachIndexed { index, userData ->
+            if (userData.minor == minor) {
+                userDataArrayList[index] = userData.copy(isAttend = isAttend)
+                return
+            }
+        }
     }
 }
