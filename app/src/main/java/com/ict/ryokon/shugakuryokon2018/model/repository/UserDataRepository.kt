@@ -20,4 +20,12 @@ object UserDataRepository {
 
     fun findByAttendanceNumber(number: AttendanceNumber): UserData? =
         userDataList.find { it.attendanceNumber == number }
+
+    fun updateUserData(newUserData: UserData) {
+        userDataList.forEachIndexed { index, oldUserData ->
+            if (oldUserData.attendanceNumber == newUserData.attendanceNumber) {
+                userDataList[index] = newUserData
+            }
+        }
+    }
 }
