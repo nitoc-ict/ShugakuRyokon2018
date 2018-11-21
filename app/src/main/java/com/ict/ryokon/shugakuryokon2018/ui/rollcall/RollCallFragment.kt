@@ -29,6 +29,7 @@ class RollCallFragment : Fragment() {
             savedInstanceState
         )
     }
+
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         inflater?.inflate(
             R.menu.menu_main,
@@ -93,7 +94,10 @@ class RollCallFragment : Fragment() {
         minor: Minor,
         isAttend: Boolean
     ) {
-        userDataArrayList.forEachIndexed { index, userData ->
+        userDataArrayList.forEachIndexed {
+                index,
+                userData
+            ->
             if (userData.minor == minor) {
                 userDataArrayList[index] = userData.copy(isAttend = isAttend)
                 return
