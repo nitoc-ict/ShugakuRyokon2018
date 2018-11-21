@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.model.Minor
-import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 import org.altbeacon.beacon.BeaconManager
 import org.altbeacon.beacon.MonitorNotifier
 import org.altbeacon.beacon.Region
@@ -27,9 +26,7 @@ class RollCallFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         viewModel = ViewModelProviders.of(this).get(RollCallViewModel::class.java)
-        viewModel.userDataList = UserDataRepository.findAll()
 
         return super.onCreateView(
             inflater,
@@ -69,14 +66,14 @@ class RollCallFragment : Fragment() {
 
         beaconManager?.addMonitorNotifier(object : MonitorNotifier {
             override fun didEnterRegion(region: Region) {
-                takeRollCallByMinor(
+                viewModel.takeRollCallByMinor(
                     Minor(region.id2.toInt()),
                     true
                 )
             }
 
             override fun didExitRegion(region: Region) {
-                takeRollCallByMinor(
+                viewModel.takeRollCallByMinor(
                     Minor(region.id2.toInt()),
                     false
                 )
@@ -88,18 +85,6 @@ class RollCallFragment : Fragment() {
             ) {
             }
         })
-    }
-
-    fun takeRollCallByMinor(
-        minor: Minor,
-        isAttend: Boolean
-    ) {
-        viewModel.userDataList.forEachIndexed { index, userData ->
-            if (userData.minor == minor) {
-                viewModel.userDataList[index] = userData.copy(isAttend = isAttend)
-                return
-            }
-        }
     }
 
     fun startOnClick(view: View) {
