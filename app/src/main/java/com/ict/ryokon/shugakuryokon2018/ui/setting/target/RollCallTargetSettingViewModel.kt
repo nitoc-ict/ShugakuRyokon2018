@@ -9,13 +9,13 @@ import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.model.Name
 
 class RollCallTargetSettingBindingModel {
-    var userData: UserData = UserData(
+    /*var userData: UserData = UserData(
         name = Name("知花", "ちばな"),
         attendanceNumber = AttendanceNumber(1),
         minor = Minor(1),
         isRollCallTarget = true,
         isAttend = true
-    )
+    )*/
     var changeSwitchTest: MutableLiveData<String> = MutableLiveData()
 
     fun onCheckedChanged(switch: View, checked: Boolean) {
