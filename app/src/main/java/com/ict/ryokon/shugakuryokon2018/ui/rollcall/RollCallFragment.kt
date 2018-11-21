@@ -67,9 +67,17 @@ class RollCallFragment : Fragment() {
 
         beaconManager.addMonitorNotifier(object : MonitorNotifier {
             override fun didEnterRegion(region: Region) {
+                changeRollCallStateByMinor(
+                    Minor(region.id2.toInt()),
+                    true
+                )
             }
 
             override fun didExitRegion(region: Region) {
+                changeRollCallStateByMinor(
+                    Minor(region.id2.toInt()),
+                    false
+                )
             }
 
             override fun didDetermineStateForRegion(
