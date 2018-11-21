@@ -1,18 +1,33 @@
 package com.ict.ryokon.shugakuryokon2018.ui.rollcall
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
+import com.ict.ryokon.shugakuryokon2018.model.UserData
+import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 import org.altbeacon.beacon.BeaconManager
 import org.altbeacon.beacon.MonitorNotifier
 import org.altbeacon.beacon.Region
-import androidx.navigation.fragment.findNavController
 
 class RollCallFragment : Fragment() {
+    private lateinit var userDataArrayList: ArrayList<UserData>
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        userDataArrayList = UserDataRepository.findAll()
+
+        return super.onCreateView(
+            inflater,
+            container,
+            savedInstanceState
+        )
+    }
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         inflater?.inflate(
             R.menu.menu_main,
