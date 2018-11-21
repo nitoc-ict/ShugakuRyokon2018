@@ -6,5 +6,6 @@ class BeaconUserListViewModel : ViewModel(){
     fun selectUser(userData: UserData) {
 
 
+
     }
 }

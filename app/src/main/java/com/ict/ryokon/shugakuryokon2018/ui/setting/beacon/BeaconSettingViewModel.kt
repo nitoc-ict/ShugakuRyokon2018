@@ -6,6 +6,7 @@ class BeaconSettingViewModel : ViewModel(){
     fun removeOnClick(){
 
 
+
     }
     fun changeOnClick(){
 
