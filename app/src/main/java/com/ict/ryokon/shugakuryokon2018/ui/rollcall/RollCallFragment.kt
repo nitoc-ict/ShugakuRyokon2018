@@ -3,17 +3,17 @@ package com.ict.ryokon.shugakuryokon2018.ui.rollcall
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.model.Minor
-import com.ict.ryokon.shugakuryokon2018.model.UserData
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 import org.altbeacon.beacon.BeaconManager
 import org.altbeacon.beacon.MonitorNotifier
 import org.altbeacon.beacon.Region
 
 class RollCallFragment : Fragment() {
-    private lateinit var userDataArrayList: ArrayList<UserData>
+    private lateinit var viewModel: RollCallViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,7 +21,8 @@ class RollCallFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        userDataArrayList = UserDataRepository.findAll()
+        viewModel = ViewModelProviders.of(this).get(RollCallViewModel::class.java)
+        viewModel.userDataList = UserDataRepository.findAll()
 
         return super.onCreateView(
             inflater,
@@ -94,12 +95,12 @@ class RollCallFragment : Fragment() {
         minor: Minor,
         isAttend: Boolean
     ) {
-        userDataArrayList.forEachIndexed {
+        viewModel.userDataList.forEachIndexed {
                 index,
                 userData
             ->
             if (userData.minor == minor) {
-                userDataArrayList[index] = userData.copy(isAttend = isAttend)
+                viewModel.userDataList[index] = userData.copy(isAttend = isAttend)
                 return
             }
         }
