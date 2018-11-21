@@ -14,6 +14,13 @@ import org.altbeacon.beacon.Region
 
 class RollCallFragment : Fragment() {
     private lateinit var viewModel: RollCallViewModel
+    private var beaconManager: BeaconManager? = null
+    private val region = Region(
+        null,   // UniqueID
+        null,   // UUID
+        null,   // Major
+        null    // Minor
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -58,16 +65,9 @@ class RollCallFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        val beaconManager = BeaconManager.getInstanceForApplication(context!!)
+        beaconManager = BeaconManager.getInstanceForApplication(context!!)
 
-        val region = Region(
-            null,   // UniqueID
-            null,   // UUID
-            null,   // Major
-            null    // Minor
-        )
-
-        beaconManager.addMonitorNotifier(object : MonitorNotifier {
+        beaconManager?.addMonitorNotifier(object : MonitorNotifier {
             override fun didEnterRegion(region: Region) {
                 takeRollCallByMinor(
                     Minor(region.id2.toInt()),
@@ -88,7 +88,6 @@ class RollCallFragment : Fragment() {
             ) {
             }
         })
-        beaconManager.startMonitoringBeaconsInRegion(region)
     }
 
     fun takeRollCallByMinor(
@@ -107,11 +106,11 @@ class RollCallFragment : Fragment() {
     }
 
     fun startOnClick(view: View) {
-        TODO("Must implement")
+        beaconManager?.startMonitoringBeaconsInRegion(region)
     }
 
     fun stopOnClick(view: View) {
-        TODO("Must implement")
+        beaconManager?.stopMonitoringBeaconsInRegion(region)
     }
 
 }
