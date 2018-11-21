@@ -87,11 +87,11 @@ class RollCallFragment : Fragment() {
         })
     }
 
-    fun startOnClick(view: View) {
+    fun startOnClick() {
         beaconManager?.startMonitoringBeaconsInRegion(region)
     }
 
-    fun stopOnClick(view: View) {
+    fun stopOnClick() {
         beaconManager?.stopMonitoringBeaconsInRegion(region)
     }
 }
