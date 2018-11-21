@@ -105,4 +105,13 @@ class RollCallFragment : Fragment() {
             }
         }
     }
+
+    fun startOnClick(view: View) {
+        TODO("Must implement")
+    }
+
+    fun stopOnClick(view: View) {
+        TODO("Must implement")
+    }
+
 }
