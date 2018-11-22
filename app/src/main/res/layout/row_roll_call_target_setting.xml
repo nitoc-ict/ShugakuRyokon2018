@@ -25,7 +25,7 @@
                 app:layout_constraintHorizontal_bias="0.95"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="168dp"/>
+                app:layout_constraintEnd_toEndOf="parent"/>
         <TextView
                 android:text="@{bindingmodel.userData.name.kanji}"
                 android:layout_width="wrap_content"
@@ -34,7 +34,6 @@
                 tool:text="歩下 太郎"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.049"
-                android:layout_marginTop="168dp"/>
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.049"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
