@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.databinding.FragmentRollCallTargetSettingBinding
 import com.ict.ryokon.shugakuryokon2018.model.AttendanceNumber
@@ -14,7 +13,6 @@ import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.model.Name
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
-import kotlinx.android.synthetic.main.row_roll_call.*
 
 class RollCallTargetSettingFragment : Fragment() {
     override fun onCreateView(
@@ -22,8 +20,6 @@ class RollCallTargetSettingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //val bindingModel = RollCallTargetSettingBindingModel()
-
         val binding: FragmentRollCallTargetSettingBinding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_roll_call_target_setting,

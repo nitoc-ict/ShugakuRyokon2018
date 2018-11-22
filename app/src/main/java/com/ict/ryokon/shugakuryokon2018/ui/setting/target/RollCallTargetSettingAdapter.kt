@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 
-class RollCallTargetSettingAdapter(private val userData: List<UserData>) : RecyclerView.Adapter<RollCallTargetSettingViewHolder>() {
+class RollCallTargetSettingAdapter(private val userDataList: List<UserData>) : RecyclerView.Adapter<RollCallTargetSettingViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -15,13 +15,13 @@ class RollCallTargetSettingAdapter(private val userData: List<UserData>) : Recyc
         false
     )
 
-    override fun getItemCount(): Int = userData.size
+    override fun getItemCount(): Int = userDataList.size
 
     override fun onBindViewHolder(
         holder: RollCallTargetSettingViewHolder,
         position: Int
     ) {
-        val bindingModel = RollCallTargetSettingBindingModel(userData[position])
+        val bindingModel = RollCallTargetSettingBindingModel(userDataList[position])
         holder.bind(bindingModel)
     }
 }

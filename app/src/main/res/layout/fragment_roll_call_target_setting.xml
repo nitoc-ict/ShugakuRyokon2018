@@ -6,34 +6,11 @@
 
         <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.ui.setting.target.RollCallTargetSettingAdapter" />
 
-        <!--<variable
-                name="viewmodel"
-                type="com.ict.ryokon.shugakuryokon2018.ui.setting.target.RollCallTargetSettingViewModel" />
-        <variable
-                name="addOnClick"
-                type="android.view.View.OnClickListener" />-->
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-<!--
-        <Switch
-                android:text="Shuri Chibana"
-                android:layout_width="350dp"
-                android:layout_height="31dp" tools:layout_editor_absoluteY="30dp"
-                tools:layout_editor_absoluteX="16dp" android:id="@+id/switch1"/>
-                android:layout_width="348dp"
-                android:layout_height="54dp"
-                android:id="@+id/targetSettingSwitch" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="16dp" app:layout_constraintHorizontal_bias="0.5"
-                android:onCheckedChanged="@{viewmodel::onCheckedChanged}"
-                android:text="@{viewmodel.changeSwitchTest}"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-        />
--->
 
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="368dp"
