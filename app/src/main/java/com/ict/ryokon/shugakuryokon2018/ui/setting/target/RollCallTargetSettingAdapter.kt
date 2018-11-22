@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 
-class RollCallTargetSettingAdapter(private val list: UserData) : RecyclerView.Adapter<RollCallTargetSettingViewHolder>() { //もとは userDataList: List<UserData>を引数としていました 過去のmosmos_syrcより
+class RollCallTargetSettingAdapter(private val userData: List<UserData>) : RecyclerView.Adapter<RollCallTargetSettingViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -15,13 +15,13 @@ class RollCallTargetSettingAdapter(private val list: UserData) : RecyclerView.Ad
         false
     )
 
-    override fun getItemCount(): Int = list.size //ここ最高にわからない これリストの数取ってるんだよね でもUserDataList型は使わない 虚無
+    override fun getItemCount(): Int = userData.size
 
     override fun onBindViewHolder(
         holder: RollCallTargetSettingViewHolder,
         position: Int
     ) {
-        val bindingModel = RollCallTargetSettingBindingModel()
+        val bindingModel = RollCallTargetSettingBindingModel(userData[position])
         holder.bind(bindingModel)
     }
 }

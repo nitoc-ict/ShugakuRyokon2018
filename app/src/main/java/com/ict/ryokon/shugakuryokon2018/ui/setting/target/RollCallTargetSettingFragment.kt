@@ -31,13 +31,19 @@ class RollCallTargetSettingFragment : Fragment() {
             false
         )
 
-        val list: UserData = UserData(
-            name = Name("知花", "ちばな"),
-            attendanceNumber = AttendanceNumber(1),
-            minor = Minor(1),
-            isRollCallTarget = true,
-            isAttend = true
-        )
+        val list = UserDataRepository.findAll()
+
+        list.add(
+            UserData(
+                name = Name("知花", "ちばな"),
+                attendanceNumber = AttendanceNumber(1),
+                minor = Minor(1),
+                isAttend = true,
+                isRollCallTarget = true
+        ))
+        // Dummy data
+
+
         binding.also { it ->
             it.adapter = RollCallTargetSettingAdapter(list)
             it.setLifecycleOwner(this)

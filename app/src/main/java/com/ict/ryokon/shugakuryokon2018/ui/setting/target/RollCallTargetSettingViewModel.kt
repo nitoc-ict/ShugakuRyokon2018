@@ -2,13 +2,11 @@ package com.ict.ryokon.shugakuryokon2018.ui.setting.target
 
 import android.util.Log
 import android.view.View
-import com.ict.ryokon.shugakuryokon2018.model.UserData
 import androidx.lifecycle.MutableLiveData
-import com.ict.ryokon.shugakuryokon2018.model.AttendanceNumber
-import com.ict.ryokon.shugakuryokon2018.model.Minor
-import com.ict.ryokon.shugakuryokon2018.model.Name
+import com.ict.ryokon.shugakuryokon2018.model.UserData
+import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
-class RollCallTargetSettingBindingModel {
+class RollCallTargetSettingBindingModel(val userData: UserData) {
     /*var userData: UserData = UserData(
         name = Name("知花", "ちばな"),
         attendanceNumber = AttendanceNumber(1),
@@ -19,21 +17,23 @@ class RollCallTargetSettingBindingModel {
     var changeSwitchTest: MutableLiveData<String> = MutableLiveData()
 
     fun onCheckedChanged(switch: View, checked: Boolean) {
-        Log.d("isAttend", "${userData.isAttend}")
-
         when (checked) {
             true -> {
-                userData.isAttend = true
+                addTarget()
             }
             false -> {
-                userData.isAttend = false
+                removeTarget()
             }
         }
+
+        Log.d("isAttend", "${userData.isRollCallTarget}")
     }
     fun addTarget() {
-        //TODO iikanji ni Target ga add sareta toki no syori wo kaku
+        userData.isRollCallTarget = true
+        UserDataRepository.updateUserData(userData)
     }
     fun removeTarget() {
-        //TODO iikanji ni Target ga removesareta toki no syori wo kaku
+        userData.isRollCallTarget = false
+        UserDataRepository.updateUserData(userData)
     }
 }
