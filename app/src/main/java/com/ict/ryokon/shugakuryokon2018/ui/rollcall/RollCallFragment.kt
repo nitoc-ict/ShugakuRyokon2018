@@ -24,6 +24,14 @@ class RollCallFragment : Fragment() {
         null    // Minor
     )
 
+    private val startOnClickListener: View.OnClickListener = View.OnClickListener {
+        beaconManager?.startMonitoringBeaconsInRegion(region)
+    }
+
+    private val stopOnClickListener: View.OnClickListener = View.OnClickListener {
+        beaconManager?.stopMonitoringBeaconsInRegion(region)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -94,13 +102,5 @@ class RollCallFragment : Fragment() {
             ) {
             }
         })
-    }
-
-    private val startOnClickListener: View.OnClickListener = View.OnClickListener {
-        beaconManager?.startMonitoringBeaconsInRegion(region)
-    }
-
-    private val stopOnClickListener: View.OnClickListener = View.OnClickListener {
-        beaconManager?.stopMonitoringBeaconsInRegion(region)
     }
 }
