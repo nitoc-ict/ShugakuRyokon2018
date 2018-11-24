@@ -6,6 +6,7 @@
 
     <data>
         <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.view.RollCallAdapter"/>
+        <variable name="viewmodel" type="com.ict.ryokon.shugakuryokon2018.ui.rollcall.RollCallViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,6 +29,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@{viewmodel.unAttendNumText}"
                     android:textSize="40sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
