@@ -37,7 +37,6 @@ class RollCallFragment : Fragment() {
             false
         )
 
-        viewModel = ViewModelProviders.of(this).get(RollCallViewModel::class.java)
 
         return binding.root
     }
