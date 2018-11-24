@@ -9,7 +9,19 @@ class BeaconAdapter(private val userDataList:List<UserData>) : RecyclerView.Adap
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): BeaconViewHolder {
+    ): BeaconViewHolder = BeaconViewHolder.create(
+        LayoutInflater.from(parent.context),
+        parent,
+        /*　Rootで指定したものをviewのルートにしない　*/
+        //attatchToRoot false
+    )
 
+    override fun getItemCount(): Int = userDataList.size
+
+    override fun onBindViewHolder(
+        holder: BeaconViewHolder,
+        position: Int
+    ) {
+        holder.bind(userDataList[position])
     }
 }
