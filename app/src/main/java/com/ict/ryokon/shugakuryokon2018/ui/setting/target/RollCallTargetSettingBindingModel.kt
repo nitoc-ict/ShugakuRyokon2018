@@ -21,10 +21,12 @@ class RollCallTargetSettingBindingModel(val userData: UserData) {
 
         Log.d("isAttend", "${userData.isRollCallTarget}")
     }
+
     fun addTarget() {
         userData.isRollCallTarget = true
         UserDataRepository.updateUserData(userData)
     }
+
     fun removeTarget() {
         userData.isRollCallTarget = false
         UserDataRepository.updateUserData(userData)
