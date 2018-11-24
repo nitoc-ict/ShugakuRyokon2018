@@ -49,6 +49,8 @@ class RollCallFragment : Fragment() {
         val adapter = RollCallAdapter(viewModel.userDataList)
         binding.adapter = adapter
 
+        binding.setLifecycleOwner(this)
+
         return binding.root
     }
 
