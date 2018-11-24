@@ -19,4 +19,16 @@ class RollCallViewModel : ViewModel() {
             }
         }
     }
+
+    fun getUnAttendUserNum(): Int {
+        var userCount = 0
+
+        userDataList.forEach {
+            if (!it.isAttend) {
+                userCount++
+            }
+        }
+
+        return userCount
+    }
 }
