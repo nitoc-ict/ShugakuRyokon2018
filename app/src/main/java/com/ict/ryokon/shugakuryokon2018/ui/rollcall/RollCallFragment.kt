@@ -93,11 +93,11 @@ class RollCallFragment : Fragment() {
         })
     }
 
-    fun startOnClick() {
+    private val startOnClickListener: View.OnClickListener = View.OnClickListener {
         beaconManager?.startMonitoringBeaconsInRegion(region)
     }
 
-    fun stopOnClick() {
+    private val stopOnClickListener: View.OnClickListener = View.OnClickListener {
         beaconManager?.stopMonitoringBeaconsInRegion(region)
     }
 }
