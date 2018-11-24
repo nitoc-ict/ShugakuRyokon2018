@@ -19,5 +19,4 @@ class RollCallViewModel : ViewModel() {
             }
         }
     }
-
 }

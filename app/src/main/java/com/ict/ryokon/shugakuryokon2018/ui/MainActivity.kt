@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val bluetoothManager= getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
+        val bluetoothManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         val bluetoothAdapter = bluetoothManager.adapter
 
         if (!bluetoothAdapter.isEnabled) {
