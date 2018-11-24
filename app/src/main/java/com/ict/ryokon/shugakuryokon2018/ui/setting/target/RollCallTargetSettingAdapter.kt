@@ -5,7 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 
-class RollCallTargetSettingAdapter(private val userDataList: List<UserData>) : RecyclerView.Adapter<RollCallTargetSettingViewHolder>() {
+class RollCallTargetSettingAdapter(private val userDataList: List<UserData>) :
+    RecyclerView.Adapter<RollCallTargetSettingViewHolder>() {
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
