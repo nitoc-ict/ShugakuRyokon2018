@@ -29,6 +29,7 @@ class RollCallTargetSettingFragment : Fragment() {
 
         val list = UserDataRepository.findAll()
 
+        // Dummy data
         list.add(
             UserData(
                 name = Name("知花", "ちばな"),
@@ -37,8 +38,6 @@ class RollCallTargetSettingFragment : Fragment() {
                 isAttend = true,
                 isRollCallTarget = true
         ))
-        // Dummy data
-
 
         binding.also { it ->
             it.adapter = RollCallTargetSettingAdapter(list)
