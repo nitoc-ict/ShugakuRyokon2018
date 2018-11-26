@@ -24,15 +24,7 @@ class RollCallViewModel : ViewModel() {
         }
     }
 
-    private fun getUnAttendUserNum(): Int {
-        var userCount = 0
-
-        userDataList.forEach {
-            if (!it.isAttend) {
-                userCount++
-            }
-        }
-
-        return userCount
-    }
+    private fun getUnAttendUserNum(): Int = userDataList
+        .map { !it.isAttend }
+        .size
 }
