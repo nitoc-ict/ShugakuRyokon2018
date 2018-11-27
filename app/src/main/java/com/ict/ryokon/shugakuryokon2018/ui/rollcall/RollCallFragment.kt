@@ -42,7 +42,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     private lateinit var viewModel: RollCallViewModel
     private var beaconManager: BeaconManager? = null
     private val region = Region(
-        "iBeacon",   // UniqueID
+        "ShugakuRyokon2018",   // UniqueID
         null,   // UUID
         null,   // Major
         null    // Minor
