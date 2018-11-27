@@ -1,5 +1,8 @@
 package com.ict.ryokon.shugakuryokon2018.ui.rollcall
 
+import android.content.Context
+import android.content.Intent
+import android.content.ServiceConnection
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -15,11 +18,27 @@ import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.databinding.FragmentRollCallBinding
 import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.ui.rollcall.view.RollCallAdapter
+import org.altbeacon.beacon.BeaconConsumer
 import org.altbeacon.beacon.BeaconManager
 import org.altbeacon.beacon.MonitorNotifier
 import org.altbeacon.beacon.Region
 
-class RollCallFragment : Fragment() {
+class RollCallFragment : Fragment(), BeaconConsumer {
+    override fun unbindService(p0: ServiceConnection?) {
+    }
+
+    override fun bindService(p0: Intent?, p1: ServiceConnection?, p2: Int): Boolean {
+        return true
+    }
+
+    override fun getApplicationContext(): Context {
+        return context!!
+    }
+
+    override fun onBeaconServiceConnect() {
+
+    }
+
     private lateinit var viewModel: RollCallViewModel
     private var beaconManager: BeaconManager? = null
     private val region = Region(
