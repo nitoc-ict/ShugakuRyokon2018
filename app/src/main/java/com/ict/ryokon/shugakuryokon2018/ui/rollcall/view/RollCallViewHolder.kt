@@ -1,4 +1,4 @@
-package com.ict.ryokon.shugakuryokon2018.view
+package com.ict.ryokon.shugakuryokon2018.ui.rollcall.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -21,12 +21,13 @@ class RollCallViewHolder(private val binding: RowRollCallBinding) : RecyclerView
             inflater: LayoutInflater,
             parent: ViewGroup,
             attachToRoot: Boolean
-        ): RollCallViewHolder = RollCallViewHolder(
-            RowRollCallBinding.inflate(
-                inflater,
-                parent,
-                attachToRoot
+        ): RollCallViewHolder =
+            RollCallViewHolder(
+                RowRollCallBinding.inflate(
+                    inflater,
+                    parent,
+                    attachToRoot
+                )
             )
-        )
     }
 }

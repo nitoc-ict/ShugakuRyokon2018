@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.databinding.FragmentRollCallBinding
 import com.ict.ryokon.shugakuryokon2018.model.Minor
-import com.ict.ryokon.shugakuryokon2018.view.RollCallAdapter
+import com.ict.ryokon.shugakuryokon2018.ui.rollcall.view.RollCallAdapter
 import org.altbeacon.beacon.BeaconManager
 import org.altbeacon.beacon.MonitorNotifier
 import org.altbeacon.beacon.Region

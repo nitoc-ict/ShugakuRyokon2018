@@ -1,4 +1,4 @@
-package com.ict.ryokon.shugakuryokon2018.view
+package com.ict.ryokon.shugakuryokon2018.ui.rollcall.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,11 +9,12 @@ class RollCallAdapter(private val userDataList: List<UserData>) : RecyclerView.A
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RollCallViewHolder = RollCallViewHolder.create(
-        LayoutInflater.from(parent.context),
-        parent,
-        false
-    )
+    ): RollCallViewHolder =
+        RollCallViewHolder.create(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
 
     override fun getItemCount(): Int = userDataList.size
 
