@@ -59,12 +59,18 @@ class RollCallFragment : Fragment() {
         return binding.root
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+    override fun onCreateOptionsMenu(
+        menu: Menu?,
+        inflater: MenuInflater?
+    ) {
         inflater?.inflate(
             R.menu.menu_main,
             menu
         )
-        super.onCreateOptionsMenu(menu, inflater)
+        super.onCreateOptionsMenu(
+            menu,
+            inflater
+        )
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
