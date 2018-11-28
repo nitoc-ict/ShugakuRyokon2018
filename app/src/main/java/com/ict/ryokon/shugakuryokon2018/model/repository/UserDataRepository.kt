@@ -39,7 +39,7 @@ object UserDataRepository {
             ),
             attendanceNumber = AttendanceNumber(1),
             minor = Minor(1),
-            isAttend = false,
+            isAttend = true,
             isRollCallTarget = false
         ),
         UserData(
@@ -50,7 +50,7 @@ object UserDataRepository {
             attendanceNumber = AttendanceNumber(2),
             minor = Minor(2),
             isAttend = false,
-            isRollCallTarget = false
+            isRollCallTarget = true
         ),
         UserData(
             name = Name(
@@ -59,8 +59,8 @@ object UserDataRepository {
             ),
             attendanceNumber = AttendanceNumber(3),
             minor = Minor(3),
-            isAttend = false,
-            isRollCallTarget = false
+            isAttend = true,
+            isRollCallTarget = true
         ),
         UserData(
             name = Name(
@@ -80,7 +80,7 @@ object UserDataRepository {
             attendanceNumber = AttendanceNumber(5),
             minor = Minor(5),
             isAttend = false,
-            isRollCallTarget = false
+            isRollCallTarget = true
         ),
         UserData(
             name = Name(
@@ -90,7 +90,7 @@ object UserDataRepository {
             attendanceNumber = AttendanceNumber(6),
             minor = Minor(6),
             isAttend = false,
-            isRollCallTarget = false
+            isRollCallTarget = true
         ),
         UserData(
             name = Name(
@@ -99,7 +99,7 @@ object UserDataRepository {
             ),
             attendanceNumber = AttendanceNumber(7),
             minor = Minor(7),
-            isAttend = false,
+            isAttend = true,
             isRollCallTarget = false
         ),
         UserData(
@@ -129,8 +129,8 @@ object UserDataRepository {
             ),
             attendanceNumber = AttendanceNumber(10),
             minor = Minor(10),
-            isAttend = false,
-            isRollCallTarget = false
+            isAttend = true,
+            isRollCallTarget = true
         )
     )
 }
