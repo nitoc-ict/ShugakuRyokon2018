@@ -16,7 +16,7 @@ class BeaconAdapter(private val userDataList:List<UserData>) :
         LayoutInflater.from(parent.context),//レイアウトファイルからビューを生成する
         parent,
         /*　Rootで指定したものをviewのルートにしない　*/
-        //attatchToRoot false
+        false
     )
 //抽象メゾット
     override fun getItemCount(): Int = userDataList.size

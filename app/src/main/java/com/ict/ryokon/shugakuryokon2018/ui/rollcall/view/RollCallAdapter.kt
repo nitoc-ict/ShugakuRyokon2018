@@ -25,4 +25,3 @@ class RollCallAdapter(private val userDataList: List<UserData>) : RecyclerView.A
         holder.bind(userDataList[position])
     }
 }
-l,
