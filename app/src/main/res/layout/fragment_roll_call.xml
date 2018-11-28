@@ -43,7 +43,8 @@
                 android:adapter="@{adapter}"
                 android:layout_margin="30dp"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
         <Button
                 android:id="@+id/button_stop"
