@@ -17,7 +17,7 @@
 
         <TextView
                 tool:text="1"
-                android:text="@{userdata.attendanceNumber.toString()}"
+                android:text="@{userdata.attendanceNumber.value.toString()}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_margin="@dimen/row_roll_call_base_margin"
