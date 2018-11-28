@@ -7,7 +7,16 @@ import com.ict.ryokon.shugakuryokon2018.model.UserData
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class RollCallViewModel : ViewModel() {
-    val userDataList: ArrayList<UserData> = UserDataRepository.findAll()
+    val userDataList: ArrayList<UserData> = arrayListOf()
+
+    init {
+        val allUserDataList = UserDataRepository.findAll()
+        allUserDataList.forEach {
+            if (it.isRollCallTarget) {
+                userDataList.add(it)
+            }
+        }
+    }
 
     @Bindable
     var unAttendNumText: String = "${getUnAttendUserNum()}/${userDataList.size}"
