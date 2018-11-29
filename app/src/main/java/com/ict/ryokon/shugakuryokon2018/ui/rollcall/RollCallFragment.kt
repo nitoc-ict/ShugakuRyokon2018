@@ -27,11 +27,17 @@ import org.altbeacon.beacon.Region
 
 class RollCallFragment : Fragment(), BeaconConsumer {
     override fun unbindService(p0: ServiceConnection) {
-        beaconManager.stopRangingBeaconsInRegion(region)
-        beaconManager.removeAllRangeNotifiers()
+        beaconManager.apply {
+            stopRangingBeaconsInRegion(region)
+            removeAllRangeNotifiers()
+        }
     }
 
-    override fun bindService(p0: Intent?, p1: ServiceConnection, p2: Int): Boolean {
+    override fun bindService(
+        p0: Intent?,
+        p1: ServiceConnection,
+        p2: Int
+    ): Boolean {
         return context?.bindService(
             p0,
             p1,
@@ -44,8 +50,10 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     }
 
     override fun onBeaconServiceConnect() {
-        beaconManager.addRangeNotifier(rangeNotifier)
-        beaconManager.startRangingBeaconsInRegion(region)
+        beaconManager.apply {
+            addRangeNotifier(rangeNotifier)
+            startRangingBeaconsInRegion(region)
+        }
     }
 
     private lateinit var viewModel: RollCallViewModel
@@ -68,7 +76,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     }
 
     private val region = Region(
-        "ShugakuRyokon2018",   // UniqueID
+        "ShugakuRyokon2018", // UniqueID
         null,   // UUID
         null,   // Major
         null    // Minor

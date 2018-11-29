@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -33,7 +34,11 @@ class MainActivity : AppCompatActivity() {
 
         // Check device what enabled BLE
         if (!packageManager.hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
-
+            Toast.makeText(
+                this,
+                "",
+                Toast.LENGTH_SHORT
+            ).show()
         }
         // API 23 or more?
         if (Build.VERSION.SDK_INT >= 23) {
@@ -44,7 +49,10 @@ class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     fun checkPermission() {
         if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            requestPermissions(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), 0)
+            requestPermissions(
+                arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
+                0
+            )
         }
     }
 
