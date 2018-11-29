@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.Bundle
-import android.os.RemoteException
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
@@ -18,68 +17,49 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.databinding.FragmentRollCallBinding
-import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.ui.rollcall.view.RollCallAdapter
 import org.altbeacon.beacon.BeaconConsumer
 import org.altbeacon.beacon.BeaconManager
 import org.altbeacon.beacon.BeaconParser
-import org.altbeacon.beacon.Identifier
-import org.altbeacon.beacon.MonitorNotifier
+import org.altbeacon.beacon.RangeNotifier
 import org.altbeacon.beacon.Region
 
 class RollCallFragment : Fragment(), BeaconConsumer {
-    override fun unbindService(p0: ServiceConnection?) {
+    override fun unbindService(p0: ServiceConnection) {
+        beaconManager.stopRangingBeaconsInRegion(region)
+        beaconManager.removeAllRangeNotifiers()
     }
 
-    override fun bindService(p0: Intent?, p1: ServiceConnection?, p2: Int): Boolean {
-        return true
+    override fun bindService(p0: Intent?, p1: ServiceConnection, p2: Int): Boolean {
+        return context?.bindService(
+            p0,
+            p1,
+            p2
+        ) ?: false
     }
 
     override fun getApplicationContext(): Context {
-        return context!!
+        return context?.applicationContext!!
     }
 
     override fun onBeaconServiceConnect() {
-
-        beaconManager?.addMonitorNotifier(object : MonitorNotifier {
-            override fun didEnterRegion(region: Region) {
-                viewModel.takeRollCallByMinor(
-                    Minor(region.id2.toInt()),
-                    true
-                )
-                Log.d("BeaconEnter", region.id2?.toInt().toString())
-            }
-
-            override fun didExitRegion(region: Region) {
-                viewModel.takeRollCallByMinor(
-                    Minor(region.id2.toInt()),
-                    false
-                )
-                Log.d("BeaconExit", region.id2?.toInt().toString())
-            }
-
-            override fun didDetermineStateForRegion(
-                state: Int,
-                region: Region
-            ) {
-                Log.d("BeaconState", state.toString())
-            }
-        })
-        beaconManager?.addRangeNotifier { beaconList, region ->
-            beaconList.forEach {
-                Log.d("BeaconHoge", "hoge")
-                Log.d("Beacon", it.id2.toInt().toString())
-            }
-        }
-
-        try {
-            beaconManager?.startRangingBeaconsInRegion(region)
-        } catch (e: RemoteException) {
-        }
+        beaconManager.addRangeNotifier(rangeNotifier)
+        beaconManager.startRangingBeaconsInRegion(region)
     }
 
     private lateinit var viewModel: RollCallViewModel
-    private var beaconManager: BeaconManager? = null
+    private val beaconManager: BeaconManager by lazy {
+        BeaconManager.getInstanceForApplication(context!!).apply {
+            beaconParsers.clear()
+            beaconParsers.add(BeaconParser().setBeaconLayout(IBEACON_FORMAT))
+            foregroundBetweenScanPeriod = 1024L // おおよそ1秒毎
+        }
+    }
+
+    private val rangeNotifier = RangeNotifier { beacons, _ ->
+        Log.d("BeaconRange", "$beacons")
+    }
+
     private val region = Region(
         "ShugakuRyokon2018",   // UniqueID
         null,   // UUID
@@ -88,11 +68,11 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     )
 
     private val startOnClickListener: View.OnClickListener = View.OnClickListener {
-        beaconManager?.startMonitoringBeaconsInRegion(region)
+        beaconManager.startRangingBeaconsInRegion(region)
     }
 
     private val stopOnClickListener: View.OnClickListener = View.OnClickListener {
-        beaconManager?.stopMonitoringBeaconsInRegion(region)
+        beaconManager.stopRangingBeaconsInRegion(region)
     }
 
     override fun onCreateView(
@@ -115,6 +95,21 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         binding.setLifecycleOwner(this)
 
         return binding.root
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        beaconManager.bind(this)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        beaconManager.unbind(this)
     }
 
     override fun onCreateOptionsMenu(
@@ -143,21 +138,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-
-        beaconManager = BeaconManager.getInstanceForApplication(context!!)
-        beaconManager?.beaconParsers?.add(BeaconParser().setBeaconLayout(IBEACON_FORMAT))
-        beaconManager?.bind(this)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        beaconManager?.unbind(this)
-    }
-
     companion object {
-        const val IBEACON_FORMAT = "m:2-3=beac,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"
+        const val IBEACON_FORMAT = "m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24"
     }
 }
