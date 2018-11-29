@@ -16,25 +16,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <Switch
-                android:layout_width="67dp"
-                android:layout_height="24dp"
-                android:id="@+id/switch1"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:onCheckedChanged="@{bindingmodel::onCheckedChanged}"
-                app:layout_constraintHorizontal_bias="0.95"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
         <TextView
-                android:text="@{bindingmodel.userData.name.kanji}"
+                android:id="@+id/attend_num_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
-                tool:text="歩下 太郎"
-                app:layout_constraintTop_toTopOf="parent"
+                tool:text="00"
+                android:text="@{bindingmodel.userData.attendanceNumber.value.toString()}"
+                android:layout_margin="@dimen/row_roll_call_base_margin"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.049"/>
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_text"
+                tool:text="歩下 太郎"
+                android:text="@{bindingmodel.userData.name.kanji}"
+                android:layout_margin="@dimen/row_roll_call_base_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/attend_num_text"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+                android:id="@+id/sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="ほげ たろう"
+                android:text="@{bindingmodel.userData.name.hiragana}"
+                android:layout_margin="@dimen/row_roll_call_base_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/main_text"/>
+
+        <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/target_switch"
+                android:onCheckedChanged="@{bindingmodel::onCheckedChanged}"
+                android:checked="@{bindingmodel.userData.rollCallTarget}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/colorListLine"
+                android:contentDescription="@string/line"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
