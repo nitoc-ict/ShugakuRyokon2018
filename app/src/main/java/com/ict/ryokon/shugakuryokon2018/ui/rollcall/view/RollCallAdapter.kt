@@ -2,10 +2,13 @@ package com.ict.ryokon.shugakuryokon2018.ui.rollcall.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.ObservableArrayList
 import androidx.recyclerview.widget.RecyclerView
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 
-class RollCallAdapter(private val userDataList: List<UserData>) : RecyclerView.Adapter<RollCallViewHolder>() {
+class RollCallAdapter(private val userDataList: ObservableArrayList<UserData>) :
+    RecyclerView.Adapter<RollCallViewHolder>() {
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

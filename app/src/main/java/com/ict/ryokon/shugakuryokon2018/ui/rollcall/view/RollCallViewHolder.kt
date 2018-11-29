@@ -10,6 +10,8 @@ class RollCallViewHolder(private val binding: RowRollCallBinding) : RecyclerView
 
     fun bind(userData: UserData) {
         binding.userdata = userData
+        binding.notifyChange()
+        binding.executePendingBindings()
     }
 
     fun unbind() {
