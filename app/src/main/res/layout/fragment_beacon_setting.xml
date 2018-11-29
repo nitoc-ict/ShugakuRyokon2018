@@ -5,7 +5,7 @@
         xmlns:tool="http://schemas.android.com/tools">
 
     <data>
-        <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.view.RollCallAdapter"/>
+        <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.model.UserData"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
