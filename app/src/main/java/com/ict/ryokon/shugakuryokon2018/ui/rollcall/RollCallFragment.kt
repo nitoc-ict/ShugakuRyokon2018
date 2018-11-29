@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.databinding.FragmentRollCallBinding
+import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.ui.rollcall.view.RollCallAdapter
 import org.altbeacon.beacon.BeaconConsumer
 import org.altbeacon.beacon.BeaconManager
@@ -58,6 +59,12 @@ class RollCallFragment : Fragment(), BeaconConsumer {
 
     private val rangeNotifier = RangeNotifier { beacons, _ ->
         Log.d("BeaconRange", "$beacons")
+        beacons.forEach {
+            viewModel.takeRollCallByMinor(
+                Minor(it.id3.toInt()),
+                true
+            )
+        }
     }
 
     private val region = Region(
