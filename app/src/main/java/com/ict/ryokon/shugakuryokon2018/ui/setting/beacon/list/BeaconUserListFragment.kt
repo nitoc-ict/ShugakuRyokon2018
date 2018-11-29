@@ -32,5 +32,5 @@ class BeaconUserListFragment : Fragment() {
         return binding.root
     }
     //mitoが書く
-    findNavController().navigate(R.id.action_beaconUserListFragment2_to_beaconSettingFragment2)
+//    findNavController().navigate(R.id.action_beaconUserListFragment2_to_beaconSettingFragment2)
 }
