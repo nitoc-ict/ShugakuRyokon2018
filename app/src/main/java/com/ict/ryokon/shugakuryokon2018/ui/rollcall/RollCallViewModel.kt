@@ -25,6 +25,9 @@ class RollCallViewModel : ViewModel() {
     @Bindable
     var userDataListText: String = "/${userDataList.size}"
 
+    @Bindable
+    var completedRollCall: Boolean = getUnAttendUserNum() == 0
+
     fun takeRollCallByMinor(
         minor: Minor,
         isAttend: Boolean
