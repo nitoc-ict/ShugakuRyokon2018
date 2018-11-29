@@ -106,6 +106,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
 
         val adapter = RollCallAdapter(viewModel.userDataList)
         binding.adapter = adapter
+        binding.viewmodel = viewModel
 
         binding.setLifecycleOwner(this)
 

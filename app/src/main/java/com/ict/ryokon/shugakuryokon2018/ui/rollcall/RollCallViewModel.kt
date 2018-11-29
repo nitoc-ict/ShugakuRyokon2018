@@ -20,7 +20,10 @@ class RollCallViewModel : ViewModel() {
     }
 
     @Bindable
-    var unAttendNumText: String = "${getUnAttendUserNum()}/${userDataList.size}"
+    var unAttendNumText: String = getUnAttendUserNum().toString()
+
+    @Bindable
+    var userDataListText: String = "/${userDataList.size}"
 
     fun takeRollCallByMinor(
         minor: Minor,
@@ -34,7 +37,15 @@ class RollCallViewModel : ViewModel() {
         }
     }
 
-    private fun getUnAttendUserNum(): Int = userDataList
-        .map { !it.isAttend }
-        .size
+    private fun getUnAttendUserNum(): Int {
+        val unAttendUserList: ArrayList<UserData> = arrayListOf()
+
+        userDataList.forEach {
+            if (!it.isAttend) {
+                unAttendUserList.add(it)
+            }
+        }
+
+        return unAttendUserList.size
+    }
 }
