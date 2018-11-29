@@ -27,7 +27,8 @@
                 android:text="登録"
                 app:layout_constraintStart_toEndOf="@id/button_stop"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="344dp"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="344dp"/>
         <TextView
                 android:text="BeaconID"
                 android:layout_width="263dp"
@@ -39,7 +40,10 @@
                 android:layout_height="47dp"
                 android:inputType="number"
                 android:ems="10"
-                tool:layout_editor_absoluteY="45dp" tool:layout_editor_absoluteX="61dp" android:id="@+id/editText2"/>
+                tool:layout_editor_absoluteY="45dp"
+                tool:layout_editor_absoluteX="61dp"
+                android:id="@+id/editText2"
+                android:onTextChanged="@{ViewModel::onMinorChanged}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
