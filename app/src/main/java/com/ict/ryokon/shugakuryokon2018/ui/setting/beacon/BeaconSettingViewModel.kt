@@ -8,8 +8,8 @@ import com.ict.ryokon.shugakuryokon2018.model.UserData
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class BeaconSettingViewModel : ViewModel() {
-    lateinit var userdata:UserData //lateinit今初期化しない
-    var minor:String = ""
+    lateinit var userdata: UserData //lateinit今初期化しない
+    var minor: String = ""
 
     fun removeOnClick(savedInstanceState: Bundle?) {
         //前の画面にもどる
