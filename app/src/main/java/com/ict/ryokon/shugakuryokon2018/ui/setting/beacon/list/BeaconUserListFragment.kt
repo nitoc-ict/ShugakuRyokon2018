@@ -32,4 +32,5 @@ class BeaconUserListFragment : Fragment(){
 
         }
     }
+    findNavController().navigate(R.id.action_beaconUserListFragment2_to_beaconSettingFragment2)
 }

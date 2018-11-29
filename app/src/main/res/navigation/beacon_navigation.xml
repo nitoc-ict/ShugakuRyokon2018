@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/beacon_navigation" app:startDestination="@id/beaconUserListFragment2">
+    <fragment android:id="@+id/beaconUserListFragment2"
+              android:name="com.ict.ryokon.shugakuryokon2018.ui.setting.beacon.list.BeaconUserListFragment"
+              android:label="BeaconUserListFragment">
+        <action android:id="@+id/action_beaconUserListFragment2_to_beaconSettingFragment2"
+                app:destination="@id/beaconSettingFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/beaconSettingFragment2"
+              android:name="com.ict.ryokon.shugakuryokon2018.ui.setting.beacon.BeaconSettingFragment"
+              android:label="BeaconSettingFragment"/>
+</navigation>
