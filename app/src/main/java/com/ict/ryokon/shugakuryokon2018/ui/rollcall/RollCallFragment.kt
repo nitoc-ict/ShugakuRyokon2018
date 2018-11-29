@@ -82,7 +82,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         null    // Minor
     )
 
-    private val startOnClickListener: View.OnClickListener = View.OnClickListener {
+    val startOnClickListener: View.OnClickListener = View.OnClickListener {
         beaconManager.startRangingBeaconsInRegion(region)
     }
 
@@ -107,6 +107,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         val adapter = RollCallAdapter(viewModel.userDataList)
         binding.adapter = adapter
         binding.viewmodel = viewModel
+        binding.startOnClick = startOnClickListener
 
         binding.setLifecycleOwner(this)
 

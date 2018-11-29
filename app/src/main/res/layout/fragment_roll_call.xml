@@ -7,6 +7,7 @@
     <data>
         <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.ui.rollcall.view.RollCallAdapter"/>
         <variable name="viewmodel" type="com.ict.ryokon.shugakuryokon2018.ui.rollcall.RollCallViewModel"/>
+        <variable name="startOnClick" type="android.view.View.OnClickListener"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -54,6 +55,7 @@
                 android:src="@drawable/ic_play_arrow_white_48dp"
                 android:layout_marginEnd="35dp"
                 android:layout_marginTop="24dp"
+                android:onClick="@{startOnClick}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
