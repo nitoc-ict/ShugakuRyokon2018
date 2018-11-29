@@ -7,7 +7,8 @@
     <data>
 
         <variable name="userdata" type="com.ict.ryokon.shugakuryokon2018.model.UserData"/>
-        <variable name="bindingmodel" type="com.ict.ryokon.shugakuryokon2018.ui.setting.target.RollCallTargetSettingBindingModel"/>
+        <variable name="bindingmodel"
+                  type="com.ict.ryokon.shugakuryokon2018.ui.setting.target.RollCallTargetSettingBindingModel"/>
 
     </data>
 
