@@ -12,36 +12,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="@drawable/frame"
-                android:layout_margin="30dp"
-                android:id="@+id/attend_num">
-
-            <TextView
-                    tool:text="BeaconID"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:textSize="40sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
         <Button
                 android:id="@+id/button_stop"
                 android:layout_width="wrap_content"
-                android:text="解除"
+                android:text="キャンセル"
                 app:layout_constraintEnd_toStartOf="@id/button_start"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="344dp"/>
         <Button
                 android:id="@+id/button_start"
                 android:layout_width="wrap_content"
@@ -49,7 +27,19 @@
                 android:text="登録"
                 app:layout_constraintStart_toEndOf="@id/button_stop"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="344dp"/>
+        <TextView
+                android:text="BeaconID"
+                android:layout_width="263dp"
+                android:layout_height="26dp" tool:layout_editor_absoluteY="19dp"
+                android:id="@+id/textView2" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+        <EditText
+                android:layout_width="262dp"
+                android:layout_height="47dp"
+                android:inputType="number"
+                android:ems="10"
+                tool:layout_editor_absoluteY="45dp" tool:layout_editor_absoluteX="61dp" android:id="@+id/editText2"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
