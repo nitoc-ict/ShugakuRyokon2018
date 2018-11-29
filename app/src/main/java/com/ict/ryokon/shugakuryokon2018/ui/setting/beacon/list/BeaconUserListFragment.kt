@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.ict.ryokon.shugakuryokon2018.R
-import com.ict.ryokon.shugakuryokon2018.databinding.FragmentUserlistBinding
+import com.ict.ryokon.shugakuryokon2018.databinding.FragmentBeaconUserListBinding
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class BeaconUserListFragment : Fragment() {
@@ -16,9 +16,9 @@ class BeaconUserListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentUserlistBinding = DataBindingUtil.inflate(
+        val binding: FragmentBeaconUserListBinding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_userlist,
+            R.layout.fragment_beacon_user_list,
             container,
             false
         )
