@@ -6,6 +6,7 @@
 
     <data>
         <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.model.UserData"/>
+        <variable name="viewmodel" type="com.ict.ryokon.shugakuryokon2018.ui.setting.beacon.BeaconSettingViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,7 +44,7 @@
                 tool:layout_editor_absoluteY="45dp"
                 tool:layout_editor_absoluteX="61dp"
                 android:id="@+id/editText2"
-                android:onTextChanged="@{ViewModel::onMinorChanged}" />
+                android:onTextChanged="@{viewmodel::onMinorChanged}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

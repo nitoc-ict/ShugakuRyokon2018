@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ict.ryokon.shugakuryokon2018.databinding.BeaconUserlistBinding
-import com.ict.ryokon.shugakuryokon2018.databinding.RowRollCallBinding//FragmentBeaconSettingBindingかと思ったけど違うかな
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 
 class BeaconViewHolder(private val binding: BeaconUserlistBinding) : RecyclerView.ViewHolder(binding.root) {
