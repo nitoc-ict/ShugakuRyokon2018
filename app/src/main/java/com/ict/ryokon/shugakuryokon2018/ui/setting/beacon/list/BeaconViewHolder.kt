@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ict.ryokon.shugakuryokon2018.databinding.RowBeaconUserListBinding
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 
-class BeaconViewHolder(private val binding: RowBeaconUserListBinding) : RecyclerView.ViewHolder(binding.root) {
+class BeaconViewHolder(val binding: RowBeaconUserListBinding) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(userData: UserData) {
         binding.userdata = userData
