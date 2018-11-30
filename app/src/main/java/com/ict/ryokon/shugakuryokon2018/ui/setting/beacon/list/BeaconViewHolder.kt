@@ -10,6 +10,8 @@ class BeaconViewHolder(val binding: RowBeaconUserListBinding) : RecyclerView.Vie
 
     fun bind(userData: UserData) {
         binding.userdata = userData
+        binding.notifyChange()
+        binding.executePendingBindings()
     }
 
     fun unbind() {

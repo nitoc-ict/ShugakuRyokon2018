@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.ObservableArrayList
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
@@ -24,10 +25,14 @@ class BeaconUserListFragment : Fragment() {
             false
         )
 
-        val list = UserDataRepository.findAll()
+        val observableUserList = ObservableArrayList<UserData>()
+        val userDataList = UserDataRepository.findAll()
+        userDataList.forEach {
+            observableUserList.add(it)
+        }
 
-        val adapter = BeaconAdapter(list)
         adapter.onItemClickListener = clickListListener
+        val adapter = BeaconAdapter(observableUserList)
 
         binding.also { it ->
             it.adapter = adapter
