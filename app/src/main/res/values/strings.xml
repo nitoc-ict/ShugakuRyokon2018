@@ -8,4 +8,7 @@
     <string name="bluetooth_alert_body">Bluetooth機能をONにしました</string>
     <string name="bluetooth_alert_ok">OK</string>
     <string name="line">line</string>
+    <string name="cancel">キャンセル</string>
+    <string name="register">登録</string>
+    <string name="minor">Minor</string>
 </resources>
