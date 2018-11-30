@@ -23,5 +23,7 @@
     <color name="colorMainText">#262626</color>
     <color name="colorSubText">#7F7F7F</color>
 
+    <color name="colorCancelText">#B92D00</color>
+
     <color name="colorMinorText">#7F7F7F</color>
 </resources>

@@ -1,7 +1,8 @@
 package com.ict.ryokon.shugakuryokon2018.ui.setting.beacon
 
-import android.os.Bundle
 import android.view.View
+import androidx.databinding.Bindable
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.ViewModel
 import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.model.UserData
@@ -11,7 +12,10 @@ class BeaconSettingViewModel : ViewModel() {
     lateinit var userdata: UserData // lateinit今初期化しない
     var minor: String = ""
 
-    fun removeOnClick(savedInstanceState: Bundle?) {
+    @Bindable
+    var changeable: ObservableBoolean = ObservableBoolean(false)
+
+    fun cancelOnClick(view: View) {
         // 前の画面にもどる
     }
 
@@ -28,5 +32,6 @@ class BeaconSettingViewModel : ViewModel() {
         count: Int
     ) {
         minor = c.toString()
+        changeable.set(minor != "" && userdata.minor != Minor(Integer.parseInt(minor)))
     }
 }

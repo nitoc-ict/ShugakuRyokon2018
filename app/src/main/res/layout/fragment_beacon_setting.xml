@@ -18,7 +18,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="@{viewmodel.minor}"
+                android:text="@{viewmodel.userdata.minor.value.toString()}"
                 android:onTextChanged="@{viewmodel::onMinorChanged}"
                 android:hint="@string/minor"
                 app:layout_constraintTop_toTopOf="parent"
@@ -35,22 +35,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cancel"
+                android:textColor="@{viewmodel.changeable ? @color/colorCancelText : @color/colorSubText}"
                 app:layout_constraintTop_toBottomOf="@id/minor_editText"
                 android:layout_marginTop="49dp"
                 app:layout_constraintEnd_toStartOf="@id/button_start"
-                android:layout_marginEnd="16dp"
-        />
+                android:layout_marginEnd="16dp"/>
         <Button
                 android:id="@+id/button_start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register"
+                android:textColor="@{viewmodel.changeable ? @color/colorAccent : @color/colorSubText}"
                 android:onClick="@{viewmodel::changeOnClick}"
                 app:layout_constraintTop_toBottomOf="@id/minor_editText"
                 android:layout_marginTop="49dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="16dp"
-        />
+                android:layout_marginEnd="16dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
