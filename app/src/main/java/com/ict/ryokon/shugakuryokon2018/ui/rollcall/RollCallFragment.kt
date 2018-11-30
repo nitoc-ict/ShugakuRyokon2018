@@ -84,7 +84,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         null    // Minor
     )
 
-    private val fabtOnClickListener: View.OnClickListener = View.OnClickListener {
+    private val fabOnClickListener: View.OnClickListener = View.OnClickListener {
         if (viewModel.isStartRollCall.get()) {
             beaconManager.stopRangingBeaconsInRegion(region)
             viewModel.isStartRollCall.set(false)
@@ -114,8 +114,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         binding.also {
             it.adapter = adapter
             it.viewmodel = viewModel
-            it.fabOnClick = fabtOnClickListener
-
+            it.fabOnClick = fabOnClickListener
             it.setLifecycleOwner(this)
         }
         return binding.root
