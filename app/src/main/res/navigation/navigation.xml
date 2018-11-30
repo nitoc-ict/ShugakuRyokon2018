@@ -18,9 +18,11 @@
               android:name="com.ict.ryokon.shugakuryokon2018.ui.setting.beacon.list.BeaconUserListFragment"
               android:label="BeaconUserListFragment">
         <action android:id="@+id/action_beaconUserListFragment_to_beaconSettingFragment"
-                app:destination="@id/beaconSettingFragment"/>
+                app:destination="@id/beaconSettingFragment" app:launchSingleTop="false"/>
     </fragment>
     <fragment android:id="@+id/beaconSettingFragment"
               android:name="com.ict.ryokon.shugakuryokon2018.ui.setting.beacon.BeaconSettingFragment"
-              android:label="BeaconSettingFragment"/>
+              android:label="BeaconSettingFragment">
+        <argument android:name="userAttendNum" app:argType="integer"/>
+    </fragment>
 </navigation>
