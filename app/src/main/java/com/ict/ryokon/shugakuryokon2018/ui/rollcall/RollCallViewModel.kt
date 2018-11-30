@@ -54,14 +54,14 @@ class RollCallViewModel : ViewModel() {
     }
 
     private fun getUnAttendUserNum(): Int {
-        val unAttendUserList: ArrayList<UserData> = arrayListOf()
+        var unAttendCount = 0
 
         userDataList.forEach {
             if (!it.isAttend) {
-                unAttendUserList.add(it)
+                unAttendCount++
             }
         }
 
-        return unAttendUserList.size
+        return unAttendCount
     }
 }
