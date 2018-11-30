@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.databinding.FragmentBeaconUserListBinding
+import com.ict.ryokon.shugakuryokon2018.model.UserData
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class BeaconUserListFragment : Fragment() {
@@ -31,17 +32,13 @@ class BeaconUserListFragment : Fragment() {
             observableUserList.add(it)
         }
 
-        adapter.onItemClickListener = clickListListener
         val adapter = BeaconAdapter(observableUserList)
+        adapter.navController = findNavController()
 
         binding.also { it ->
             it.adapter = adapter
             it.setLifecycleOwner(this)
         }
         return binding.root
-    }
-
-    private val clickListListener: View.OnClickListener = View.OnClickListener {
-        findNavController().navigate(R.id.action_beaconUserListFragment_to_beaconSettingFragment)
     }
 }

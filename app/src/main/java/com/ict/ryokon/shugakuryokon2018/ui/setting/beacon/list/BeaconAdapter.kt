@@ -1,17 +1,17 @@
 package com.ict.ryokon.shugakuryokon2018.ui.setting.beacon.list
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableList
+import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 
 class BeaconAdapter(private val userDataList: ObservableArrayList<UserData>) :
     RecyclerView.Adapter<BeaconViewHolder>() { // ViewHolderクラスとしてBeaconViewHolderを定義
 
-    lateinit var onItemClickListener: View.OnClickListener
+    lateinit var navController: NavController
 
     init {
         userDataList.addOnListChangedCallback(
@@ -86,6 +86,11 @@ class BeaconAdapter(private val userDataList: ObservableArrayList<UserData>) :
         position: Int
     ) {
         holder.bind(userDataList[position])
-        holder.binding.root.setOnClickListener(onItemClickListener)
+        holder.binding.root.setOnClickListener {
+            val action = BeaconUserListFragmentDirections.actionBeaconUserListFragmentToBeaconSettingFragment(
+                userDataList[position].attendanceNumber.value
+            )
+            navController.navigate(action)
+        }
     }
 }
