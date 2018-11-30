@@ -3,6 +3,7 @@ package com.ict.ryokon.shugakuryokon2018.ui.rollcall
 import androidx.databinding.Bindable
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableField
 import androidx.lifecycle.ViewModel
 import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.model.UserData
@@ -21,13 +22,13 @@ class RollCallViewModel : ViewModel() {
     }
 
     @Bindable
-    var unAttendNumText: String = getUnAttendUserNum().toString()
+    var unAttendNumText: ObservableField<String> = ObservableField(getUnAttendUserNum().toString())
 
     @Bindable
-    var userDataListText: String = "/${userDataList.size}"
+    var userDataListText: ObservableField<String> = ObservableField("/${userDataList.size}")
 
     @Bindable
-    var completedRollCall: Boolean = getUnAttendUserNum() == 0
+    var completedRollCall: ObservableBoolean = ObservableBoolean(getUnAttendUserNum() == 0)
 
     @Bindable
     var isStartRollCall: ObservableBoolean = ObservableBoolean(false)
