@@ -74,6 +74,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
                 true
             )
         }
+        binding.notifyChange()
     }
 
     private val region = Region(
