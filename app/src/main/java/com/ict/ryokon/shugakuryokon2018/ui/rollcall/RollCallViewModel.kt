@@ -48,7 +48,9 @@ class RollCallViewModel : ViewModel() {
                 userDataList.add(it)
             }
         }
-
+        unAttendNumText = ObservableField(getUnAttendUserNum().toString())
+        userDataListText = ObservableField("/${userDataList.size}")
+        completedRollCall = ObservableBoolean(getUnAttendUserNum() == 0)
     }
 
     private fun getUnAttendUserNum(): Int {
