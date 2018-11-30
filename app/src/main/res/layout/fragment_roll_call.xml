@@ -7,7 +7,7 @@
     <data>
         <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.ui.rollcall.view.RollCallAdapter"/>
         <variable name="viewmodel" type="com.ict.ryokon.shugakuryokon2018.ui.rollcall.RollCallViewModel"/>
-        <variable name="startOnClick" type="android.view.View.OnClickListener"/>
+        <variable name="fabOnClick" type="android.view.View.OnClickListener"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,10 +52,10 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:src="@drawable/ic_play_arrow_white_48dp"
+                android:src="@{viewmodel.startRollCall ? @drawable/ic_pause_white_48dp : @drawable/ic_play_arrow_white_48dp}"
                 android:layout_marginEnd="35dp"
                 android:layout_marginTop="24dp"
-                android:onClick="@{startOnClick}"
+                android:onClick="@{fabOnClick}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 

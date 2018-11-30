@@ -2,6 +2,7 @@ package com.ict.ryokon.shugakuryokon2018.ui.rollcall
 
 import androidx.databinding.Bindable
 import androidx.databinding.ObservableArrayList
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.ViewModel
 import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.model.UserData
@@ -27,6 +28,9 @@ class RollCallViewModel : ViewModel() {
 
     @Bindable
     var completedRollCall: Boolean = getUnAttendUserNum() == 0
+
+    @Bindable
+    var isStartRollCall: ObservableBoolean = ObservableBoolean(false)
 
     fun takeRollCallByMinor(
         minor: Minor,

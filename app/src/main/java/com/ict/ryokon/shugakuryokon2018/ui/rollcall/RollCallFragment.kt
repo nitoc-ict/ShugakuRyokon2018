@@ -26,6 +26,7 @@ import org.altbeacon.beacon.RangeNotifier
 import org.altbeacon.beacon.Region
 
 class RollCallFragment : Fragment(), BeaconConsumer {
+    private lateinit var binding: FragmentRollCallBinding
     override fun unbindService(p0: ServiceConnection) {
         beaconManager.apply {
             stopRangingBeaconsInRegion(region)
@@ -82,12 +83,16 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         null    // Minor
     )
 
-    val startOnClickListener: View.OnClickListener = View.OnClickListener {
-        beaconManager.startRangingBeaconsInRegion(region)
-    }
+    private val fabtOnClickListener: View.OnClickListener = View.OnClickListener {
+        if (viewModel.isStartRollCall.get()) {
+            beaconManager.stopRangingBeaconsInRegion(region)
+            viewModel.isStartRollCall.set(false)
 
-    private val stopOnClickListener: View.OnClickListener = View.OnClickListener {
-        beaconManager.stopRangingBeaconsInRegion(region)
+        } else {
+            beaconManager.startRangingBeaconsInRegion(region)
+            viewModel.isStartRollCall.set(true)
+        }
+        binding.notifyChange()
     }
 
     override fun onCreateView(
@@ -97,7 +102,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     ): View? {
         viewModel = ViewModelProviders.of(this).get(RollCallViewModel::class.java)
 
-        val binding: FragmentRollCallBinding = DataBindingUtil.inflate(
+        binding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_roll_call,
             container,
@@ -108,7 +113,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         binding.also {
             it.adapter = adapter
             it.viewmodel = viewModel
-            it.startOnClick = startOnClickListener
+            it.fabOnClick = fabtOnClickListener
 
             it.setLifecycleOwner(this)
         }
