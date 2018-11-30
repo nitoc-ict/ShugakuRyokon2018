@@ -74,6 +74,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
                 true
             )
         }
+        viewModel.updateUserDataList()
         binding.notifyChange()
     }
 
@@ -88,7 +89,6 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         if (viewModel.isStartRollCall.get()) {
             beaconManager.stopRangingBeaconsInRegion(region)
             viewModel.isStartRollCall.set(false)
-
         } else {
             beaconManager.startRangingBeaconsInRegion(region)
             viewModel.isStartRollCall.set(true)
