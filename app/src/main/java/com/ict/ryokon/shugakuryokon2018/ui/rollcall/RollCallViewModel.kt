@@ -13,12 +13,7 @@ class RollCallViewModel : ViewModel() {
     val userDataList: ObservableArrayList<UserData> = ObservableArrayList()
 
     init {
-        val allUserDataList = UserDataRepository.findAll()
-        allUserDataList.forEach {
-            if (it.isRollCallTarget) {
-                userDataList.add(it)
-            }
-        }
+        updateUserDataList()
     }
 
     @Bindable
@@ -43,6 +38,17 @@ class RollCallViewModel : ViewModel() {
                 return
             }
         }
+    }
+
+    fun updateUserDataList() {
+        userDataList.clear()
+        val allUserDataList = UserDataRepository.findAll()
+        allUserDataList.forEach {
+            if (it.isRollCallTarget) {
+                userDataList.add(it)
+            }
+        }
+
     }
 
     private fun getUnAttendUserNum(): Int {

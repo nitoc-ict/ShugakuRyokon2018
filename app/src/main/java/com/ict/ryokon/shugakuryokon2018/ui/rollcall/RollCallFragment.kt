@@ -129,6 +129,9 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     override fun onResume() {
         super.onResume()
         beaconManager.bind(this)
+        viewModel.updateUserDataList()
+        binding.adapter = RollCallAdapter(viewModel.userDataList)
+        binding.notifyChange()
     }
 
     override fun onDestroy() {
