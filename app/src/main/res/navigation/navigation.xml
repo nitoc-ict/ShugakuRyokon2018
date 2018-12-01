@@ -5,7 +5,10 @@
 
     <fragment android:id="@+id/rollCallTargetSettingFragment"
               android:name="com.ict.ryokon.shugakuryokon2018.ui.setting.target.RollCallTargetSettingFragment"
-              android:label="RollCallTargetSettingFragment"/>
+              android:label="RollCallTargetSettingFragment">
+        <action android:id="@+id/action_rollCallTargetSettingFragment_to_rollCallFragment"
+                app:destination="@id/rollCallFragment"/>
+    </fragment>
     <fragment android:id="@+id/rollCallFragment"
               android:name="com.ict.ryokon.shugakuryokon2018.ui.rollcall.RollCallFragment"
               android:label="RollCallFragment">
@@ -19,10 +22,14 @@
               android:label="BeaconUserListFragment">
         <action android:id="@+id/action_beaconUserListFragment_to_beaconSettingFragment"
                 app:destination="@id/beaconSettingFragment" app:launchSingleTop="false"/>
+        <action android:id="@+id/action_beaconUserListFragment_to_rollCallFragment"
+                app:destination="@id/rollCallFragment"/>
     </fragment>
     <fragment android:id="@+id/beaconSettingFragment"
               android:name="com.ict.ryokon.shugakuryokon2018.ui.setting.beacon.BeaconSettingFragment"
               android:label="BeaconSettingFragment">
         <argument android:name="userAttendNum" app:argType="integer"/>
+        <action android:id="@+id/action_beaconSettingFragment_to_beaconUserListFragment"
+                app:destination="@id/beaconUserListFragment"/>
     </fragment>
 </navigation>
