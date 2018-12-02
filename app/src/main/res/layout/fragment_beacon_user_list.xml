@@ -18,7 +18,10 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_margin="30dp"
+                android:layout_marginTop="86dp"
+                android:layout_marginBottom="@dimen/roll_call_target_base_margin"
+                android:layout_marginStart="@dimen/roll_call_target_base_margin"
+                android:layout_marginEnd="@dimen/roll_call_target_base_margin"
                 android:adapter="@{adapter}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:id="@+id/fragment_userlist"/>

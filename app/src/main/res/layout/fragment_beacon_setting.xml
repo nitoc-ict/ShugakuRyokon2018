@@ -22,7 +22,7 @@
                 android:onTextChanged="@{viewmodel::onMinorChanged}"
                 android:hint="@string/minor"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="56dp"
+                android:layout_marginTop="112dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
