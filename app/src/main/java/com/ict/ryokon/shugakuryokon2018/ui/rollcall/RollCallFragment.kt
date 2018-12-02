@@ -128,7 +128,6 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         val appCompatActivity = activity as AppCompatActivity?
         appCompatActivity?.supportActionBar?.let {
             it.title = ""
-        }
     }
 
     override fun onResume() {
@@ -139,6 +138,9 @@ class RollCallFragment : Fragment(), BeaconConsumer {
             it.adapter = RollCallAdapter(viewModel.userDataList)
             it.viewmodel = viewModel
             it.notifyChange()
+        }
+            it.setDisplayHomeAsUpEnabled(false)
+            it.setHomeButtonEnabled(false)
         }
     }
 
