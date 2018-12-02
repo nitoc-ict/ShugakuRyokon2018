@@ -43,12 +43,11 @@ class BeaconUserListFragment : Fragment() {
         return binding.root
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onResume() {
+        super.onResume()
         val appCompatActivity = activity as AppCompatActivity?
         appCompatActivity?.supportActionBar?.let {
-            it.title = ""
+            it.title = getString(R.string.title_beacon_setting)
             it.setDisplayHomeAsUpEnabled(true)
             it.setHomeButtonEnabled(true)
         }

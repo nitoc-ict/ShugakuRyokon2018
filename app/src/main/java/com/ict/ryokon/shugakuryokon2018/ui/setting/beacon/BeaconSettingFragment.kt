@@ -14,6 +14,8 @@ import com.ict.ryokon.shugakuryokon2018.model.AttendanceNumber
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class BeaconSettingFragment : Fragment() {
+    private lateinit var viewmodel: BeaconSettingViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -26,26 +28,27 @@ class BeaconSettingFragment : Fragment() {
             false
         )
 
-        val viewModel: BeaconSettingViewModel = ViewModelProviders.of(this).get(BeaconSettingViewModel::class.java)
+        viewmodel = ViewModelProviders.of(this).get(BeaconSettingViewModel::class.java)
         val safeArgs = BeaconSettingFragmentArgs.fromBundle(arguments)
         val userAttendNum = safeArgs.userAttendNum
 
-        UserDataRepository.findByAttendanceNumber(AttendanceNumber(userAttendNum))?.let { viewModel.userdata = it }
+        UserDataRepository.findByAttendanceNumber(AttendanceNumber(userAttendNum))?.let { viewmodel.userdata = it }
 
         binding.also { it ->
             it.setLifecycleOwner(this)
-            it.viewmodel = viewModel
+            it.viewmodel = viewmodel
         }
 
         return binding.root
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onResume() {
+        super.onResume()
         val appCompatActivity = activity as AppCompatActivity?
         appCompatActivity?.supportActionBar?.let {
-            it.title = ""
+            it.title = "${viewmodel.userdata.attendanceNumber.value} " +
+                    "${viewmodel.userdata.name.kanji} " +
+                    viewmodel.userdata.name.hiragana
             it.setDisplayHomeAsUpEnabled(true)
             it.setHomeButtonEnabled(true)
         }

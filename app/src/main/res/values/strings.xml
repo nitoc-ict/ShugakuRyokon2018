@@ -11,4 +11,7 @@
     <string name="cancel">キャンセル</string>
     <string name="register">登録</string>
     <string name="minor">Minor</string>
+    <string name="title_roll_call">点呼を取る</string>
+    <string name="title_roll_call_target">点呼対象者設定</string>
+    <string name="title_beacon_setting">ビーコン設定</string>
 </resources>

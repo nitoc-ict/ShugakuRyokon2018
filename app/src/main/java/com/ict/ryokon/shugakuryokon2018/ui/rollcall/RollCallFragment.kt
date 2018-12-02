@@ -124,10 +124,6 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
-
-        val appCompatActivity = activity as AppCompatActivity?
-        appCompatActivity?.supportActionBar?.let {
-            it.title = ""
     }
 
     override fun onResume() {
@@ -139,6 +135,9 @@ class RollCallFragment : Fragment(), BeaconConsumer {
             it.viewmodel = viewModel
             it.notifyChange()
         }
+        val appCompatActivity = activity as AppCompatActivity?
+        appCompatActivity?.supportActionBar?.let {
+            it.title = getString(R.string.title_roll_call)
             it.setDisplayHomeAsUpEnabled(false)
             it.setHomeButtonEnabled(false)
         }
