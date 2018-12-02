@@ -14,6 +14,7 @@
             android:background="@color/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:titleTextColor="@color/back"
             app:title="@string/app_name"/>
 
     <fragment
