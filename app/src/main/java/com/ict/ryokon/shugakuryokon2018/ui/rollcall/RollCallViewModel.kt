@@ -36,6 +36,7 @@ class RollCallViewModel : ViewModel() {
         userDataList.forEachIndexed { index, userData ->
             if (userData.minor == minor) {
                 userDataList[index] = userData.copy(isAttend = isAttend)
+                UserDataRepository.updateUserData(userDataList[index])
                 return
             }
         }
@@ -59,6 +60,15 @@ class RollCallViewModel : ViewModel() {
         userDataListText = ObservableField("/${userDataList.size}")
         completedRollCall = ObservableBoolean(getUnAttendUserNum() == 0)
         isStartRollCall = ObservableBoolean(false)
+    }
+
+    fun initRollCall() {
+        userDataList.forEach {
+            takeRollCallByMinor(
+                it.minor,
+                false
+            )
+        }
     }
 
     private fun getUnAttendUserNum(): Int {

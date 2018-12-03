@@ -90,6 +90,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         if (viewModel.isStartRollCall.get()) {
             beaconManager.stopRangingBeaconsInRegion(region)
             viewModel.isStartRollCall.set(false)
+            viewModel.initRollCall()
         } else {
             beaconManager.startRangingBeaconsInRegion(region)
             viewModel.isStartRollCall.set(true)
