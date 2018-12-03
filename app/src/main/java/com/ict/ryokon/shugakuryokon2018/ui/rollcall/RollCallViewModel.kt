@@ -13,20 +13,21 @@ class RollCallViewModel : ViewModel() {
     val userDataList: ObservableArrayList<UserData> = ObservableArrayList()
 
     init {
+        initValue()
         updateUserDataList()
     }
 
     @Bindable
-    var unAttendNumText: ObservableField<String> = ObservableField(getUnAttendUserNum().toString())
+    lateinit var unAttendNumText: ObservableField<String>
 
     @Bindable
-    var userDataListText: ObservableField<String> = ObservableField("/${userDataList.size}")
+    lateinit var userDataListText: ObservableField<String>
 
     @Bindable
-    var completedRollCall: ObservableBoolean = ObservableBoolean(getUnAttendUserNum() == 0)
+    lateinit var completedRollCall: ObservableBoolean
 
     @Bindable
-    var isStartRollCall: ObservableBoolean = ObservableBoolean(false)
+    lateinit var isStartRollCall: ObservableBoolean
 
     fun takeRollCallByMinor(
         minor: Minor,
@@ -51,6 +52,13 @@ class RollCallViewModel : ViewModel() {
         unAttendNumText.set(getUnAttendUserNum().toString())
         userDataListText.set("/${userDataList.size}")
         completedRollCall.set(getUnAttendUserNum() == 0)
+    }
+
+    private fun initValue() {
+        unAttendNumText = ObservableField(getUnAttendUserNum().toString())
+        userDataListText = ObservableField("/${userDataList.size}")
+        completedRollCall = ObservableBoolean(getUnAttendUserNum() == 0)
+        isStartRollCall = ObservableBoolean(false)
     }
 
     private fun getUnAttendUserNum(): Int {
