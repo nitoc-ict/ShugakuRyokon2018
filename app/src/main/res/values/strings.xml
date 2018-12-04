@@ -16,4 +16,5 @@
     <string name="title_beacon_setting">ビーコン設定</string>
 
     <string name="user_data">UserData</string>
+    <string name="initialized">initialized</string>
 </resources>
