@@ -27,7 +27,23 @@ class DataRepository {
         )
     }
 
-    // 設定値 String を保存（Context は Activity や Application や Service）
+    fun saveBoolean(
+        ctx: Context,
+        key: String,
+        value: Boolean
+    ) {
+        ctx.getSharedPreferences(
+            ctx.getString(R.string.app_name),
+            Context.MODE_PRIVATE
+        )
+            .edit()
+            .putBoolean(
+                key,
+                value
+            )
+            .apply()
+    }
+
     private fun saveString(
         ctx: Context,
         key: String,
@@ -36,15 +52,27 @@ class DataRepository {
         ctx.getSharedPreferences(
             ctx.getString(R.string.app_name),
             Context.MODE_PRIVATE
-        ).edit().apply {
-            putString(
+        )
+            .edit()
+            .putString(
                 key,
                 value
             )
-        }.apply()
+            .apply()
     }
 
-    // 設定値 String を取得（Context は Activity や Application や Service）
+    fun loadBoolean(
+        ctx: Context,
+        key: String
+    ): Boolean =
+        ctx.getSharedPreferences(
+            ctx.getString(R.string.app_name),
+            Context.MODE_PRIVATE
+        ).getBoolean(
+            key,
+            false
+        )
+
     fun loadString(
         ctx: Context,
         key: String
@@ -55,7 +83,7 @@ class DataRepository {
         ).getString(
             key,
             ""
-        ) ?: ""// 第２引数はkeyが存在しない時に返す初期値
+        ) ?: ""
 
     fun parseData(jsonDataString: String = ""): ArrayList<UserData>? {
         val moshi = Moshi.Builder().build()
