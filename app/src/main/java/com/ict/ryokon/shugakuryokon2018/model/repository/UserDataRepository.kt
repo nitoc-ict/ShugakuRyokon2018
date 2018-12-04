@@ -1,12 +1,36 @@
 package com.ict.ryokon.shugakuryokon2018.model.repository
 
+import android.content.Context
+import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.model.AttendanceNumber
 import com.ict.ryokon.shugakuryokon2018.model.Minor
 import com.ict.ryokon.shugakuryokon2018.model.Name
 import com.ict.ryokon.shugakuryokon2018.model.UserData
 
 object UserDataRepository {
-    private var userDataList: ArrayList<UserData> = DummyData().dummy()
+    private lateinit var userDataList: ArrayList<UserData>
+
+    fun initRepository(ctx: Context) {
+        if (DataRepository().loadBoolean(
+                ctx,
+                ctx.getString(R.string.initialized)
+            )
+        ) {
+            userDataList = DataRepository().parseData(
+                DataRepository().loadString(
+                    ctx,
+                    "user_data_list"
+                )
+            ) ?: arrayListOf()
+        } else {
+            DummyData().dummy()
+            DataRepository().saveBoolean(
+                ctx,
+                ctx.getString(R.string.initialized),
+                true
+            )
+        }
+    }
 
     fun storeAll(userDataList: ArrayList<UserData>) {
         this.userDataList = userDataList
