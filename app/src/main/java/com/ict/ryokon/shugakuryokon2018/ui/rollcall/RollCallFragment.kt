@@ -90,8 +90,8 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         if (viewModel.isStartRollCall.get()) {
             beaconManager.stopRangingBeaconsInRegion(region)
             viewModel.isStartRollCall.set(false)
-            viewModel.initRollCall()
         } else {
+            viewModel.initRollCall()
             beaconManager.startRangingBeaconsInRegion(region)
             viewModel.isStartRollCall.set(true)
         }
@@ -130,7 +130,10 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     override fun onResume() {
         super.onResume()
         beaconManager.bind(this)
-        viewModel.updateUserDataList()
+        viewModel.apply {
+            updateUserDataList()
+            initRollCall()
+        }
         binding.also {
             it.adapter = RollCallAdapter(viewModel.userDataList)
             it.viewmodel = viewModel
