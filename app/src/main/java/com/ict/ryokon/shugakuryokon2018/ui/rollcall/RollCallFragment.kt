@@ -75,7 +75,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
                 true
             )
         }
-        viewModel.updateUserDataList()
+        viewModel.updateRollCallContent()
         binding.notifyChange()
     }
 

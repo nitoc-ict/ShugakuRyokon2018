@@ -50,6 +50,9 @@ class RollCallViewModel : ViewModel() {
                 userDataList.add(it)
             }
         }
+    }
+
+    fun updateRollCallContent() {
         unAttendNumText.set(getUnAttendUserNum().toString())
         userDataListText.set("/${userDataList.size}")
         completedRollCall.set(getUnAttendUserNum() == 0)
@@ -69,6 +72,7 @@ class RollCallViewModel : ViewModel() {
                 false
             )
         }
+        updateRollCallContent()
     }
 
     private fun getUnAttendUserNum(): Int {
