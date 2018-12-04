@@ -52,10 +52,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     }
 
     override fun onBeaconServiceConnect() {
-        beaconManager.apply {
-            addRangeNotifier(rangeNotifier)
-            startRangingBeaconsInRegion(region)
-        }
+        beaconManager.addRangeNotifier(rangeNotifier)
     }
 
     private lateinit var viewModel: RollCallViewModel
