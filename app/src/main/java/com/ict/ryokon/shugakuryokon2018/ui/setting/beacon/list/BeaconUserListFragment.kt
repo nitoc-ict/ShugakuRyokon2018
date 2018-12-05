@@ -15,6 +15,8 @@ import com.ict.ryokon.shugakuryokon2018.model.UserData
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class BeaconUserListFragment : Fragment() {
+    private lateinit var userDataList: ArrayList<UserData>
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,7 +30,7 @@ class BeaconUserListFragment : Fragment() {
         )
 
         val observableUserList = ObservableArrayList<UserData>()
-        val userDataList = UserDataRepository.findAll()
+        userDataList = UserDataRepository.findAll()
         userDataList.forEach {
             observableUserList.add(it)
         }
