@@ -28,33 +28,6 @@ import org.altbeacon.beacon.Region
 
 class RollCallFragment : Fragment(), BeaconConsumer {
     private lateinit var binding: FragmentRollCallBinding
-    override fun unbindService(p0: ServiceConnection) {
-        beaconManager.apply {
-            stopRangingBeaconsInRegion(region)
-            removeAllRangeNotifiers()
-        }
-    }
-
-    override fun bindService(
-        p0: Intent?,
-        p1: ServiceConnection,
-        p2: Int
-    ): Boolean {
-        return context?.bindService(
-            p0,
-            p1,
-            p2
-        ) ?: false
-    }
-
-    override fun getApplicationContext(): Context {
-        return context?.applicationContext!!
-    }
-
-    override fun onBeaconServiceConnect() {
-        beaconManager.addRangeNotifier(rangeNotifier)
-    }
-
     private lateinit var viewModel: RollCallViewModel
     private val beaconManager: BeaconManager by lazy {
         BeaconManager.getInstanceForApplication(context!!).apply {
@@ -63,7 +36,6 @@ class RollCallFragment : Fragment(), BeaconConsumer {
             foregroundBetweenScanPeriod = 1024L // おおよそ1秒毎
         }
     }
-
     private val rangeNotifier = RangeNotifier { beacons, _ ->
         Log.d("BeaconRange", "$beacons")
         beacons.forEach {
@@ -75,14 +47,12 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         viewModel.updateRollCallContent()
         binding.notifyChange()
     }
-
     private val region = Region(
         "ShugakuRyokon2018", // UniqueID
         null,   // UUID
         null,   // Major
         null    // Minor
     )
-
     private val fabOnClickListener: View.OnClickListener = View.OnClickListener {
         if (viewModel.isStartRollCall.get()) {
             beaconManager.stopRangingBeaconsInRegion(region)
@@ -93,6 +63,11 @@ class RollCallFragment : Fragment(), BeaconConsumer {
             viewModel.isStartRollCall.set(true)
         }
         binding.notifyChange()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -117,11 +92,6 @@ class RollCallFragment : Fragment(), BeaconConsumer {
             it.setLifecycleOwner(this)
         }
         return binding.root
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
     }
 
     override fun onResume() {
@@ -173,6 +143,33 @@ class RollCallFragment : Fragment(), BeaconConsumer {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun unbindService(p0: ServiceConnection) {
+        beaconManager.apply {
+            stopRangingBeaconsInRegion(region)
+            removeAllRangeNotifiers()
+        }
+    }
+
+    override fun bindService(
+        p0: Intent?,
+        p1: ServiceConnection,
+        p2: Int
+    ): Boolean {
+        return context?.bindService(
+            p0,
+            p1,
+            p2
+        ) ?: false
+    }
+
+    override fun getApplicationContext(): Context {
+        return context?.applicationContext!!
+    }
+
+    override fun onBeaconServiceConnect() {
+        beaconManager.addRangeNotifier(rangeNotifier)
     }
 
     companion object {

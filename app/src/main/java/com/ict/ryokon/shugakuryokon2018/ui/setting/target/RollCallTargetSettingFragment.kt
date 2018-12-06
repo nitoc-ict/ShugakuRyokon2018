@@ -14,6 +14,7 @@ import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class RollCallTargetSettingFragment : Fragment() {
     private lateinit var userDataList: ArrayList<UserData>
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
