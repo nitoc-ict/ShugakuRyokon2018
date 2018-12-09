@@ -19,11 +19,11 @@ object UserDataRepository {
             userDataList = DataRepository().parseData(
                 DataRepository().loadString(
                     ctx,
-                    "user_data_list"
+                    ctx.getString(R.string.user_data)
                 )
-            ) ?: arrayListOf()
+            ) ?: DummyData().dummy()
         } else {
-            DummyData().dummy()
+            userDataList = DummyData().dummy()
             DataRepository().saveBoolean(
                 ctx,
                 ctx.getString(R.string.initialized),
