@@ -27,7 +27,7 @@ import org.altbeacon.beacon.RangeNotifier
 import org.altbeacon.beacon.Region
 
 class RollCallFragment : Fragment(), BeaconConsumer {
-    private lateinit var binding: FragmentRollCallBinding
+    private var binding: FragmentRollCallBinding? = null
     private lateinit var viewModel: RollCallViewModel
     private val beaconManager: BeaconManager by lazy {
         BeaconManager.getInstanceForApplication(context!!).apply {
@@ -45,7 +45,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
             )
         }
         viewModel.updateRollCallContent()
-        binding.notifyChange()
+        binding?.notifyChange()
     }
     private val region = Region(
         "ShugakuRyokon2018", // UniqueID
@@ -62,7 +62,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
             beaconManager.startRangingBeaconsInRegion(region)
             viewModel.isStartRollCall.set(true)
         }
-        binding.notifyChange()
+        binding?.notifyChange()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,13 +85,13 @@ class RollCallFragment : Fragment(), BeaconConsumer {
         )
 
         val adapter = RollCallAdapter(viewModel.userDataList)
-        binding.also {
+        binding?.also {
             it.adapter = adapter
             it.viewmodel = viewModel
             it.fabOnClick = fabOnClickListener
             it.setLifecycleOwner(this)
         }
-        return binding.root
+        return binding?.root
     }
 
     override fun onResume() {
@@ -101,7 +101,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
             updateUserDataList()
             initRollCall()
         }
-        binding.also {
+        binding?.also {
             it.adapter = RollCallAdapter(viewModel.userDataList)
             it.viewmodel = viewModel
             it.notifyChange()
@@ -117,6 +117,7 @@ class RollCallFragment : Fragment(), BeaconConsumer {
     override fun onDestroy() {
         super.onDestroy()
         beaconManager.unbind(this)
+        binding = null
     }
 
     override fun onCreateOptionsMenu(
