@@ -29,7 +29,8 @@ class BeaconSettingFragment : Fragment() {
         )
 
         viewmodel = ViewModelProviders.of(this).get(BeaconSettingViewModel::class.java)
-        val safeArgs = BeaconSettingFragmentArgs.fromBundle(arguments)
+        val args = arguments ?: return null
+        val safeArgs = BeaconSettingFragmentArgs.fromBundle(args)
         val userAttendNum = safeArgs.userAttendNum
 
         UserDataRepository.findByAttendanceNumber(AttendanceNumber(userAttendNum))?.let { viewmodel.userdata = it }
