@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.databinding.FragmentRollCallTargetSettingBinding
 import com.ict.ryokon.shugakuryokon2018.model.UserData
+import com.ict.ryokon.shugakuryokon2018.model.repository.DataRepository
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class RollCallTargetSettingFragment : Fragment() {
@@ -45,5 +46,13 @@ class RollCallTargetSettingFragment : Fragment() {
             it.setDisplayHomeAsUpEnabled(true)
             it.setHomeButtonEnabled(true)
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        DataRepository().saveUserDataList(
+            context!!,
+            userDataList
+        )
     }
 }

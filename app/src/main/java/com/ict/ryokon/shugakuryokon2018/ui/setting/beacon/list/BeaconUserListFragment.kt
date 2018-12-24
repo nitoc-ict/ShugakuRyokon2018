@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.ict.ryokon.shugakuryokon2018.R
 import com.ict.ryokon.shugakuryokon2018.databinding.FragmentBeaconUserListBinding
 import com.ict.ryokon.shugakuryokon2018.model.UserData
+import com.ict.ryokon.shugakuryokon2018.model.repository.DataRepository
 import com.ict.ryokon.shugakuryokon2018.model.repository.UserDataRepository
 
 class BeaconUserListFragment : Fragment() {
@@ -53,5 +54,13 @@ class BeaconUserListFragment : Fragment() {
             it.setDisplayHomeAsUpEnabled(true)
             it.setHomeButtonEnabled(true)
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        DataRepository().saveUserDataList(
+            context!!,
+            userDataList
+        )
     }
 }
