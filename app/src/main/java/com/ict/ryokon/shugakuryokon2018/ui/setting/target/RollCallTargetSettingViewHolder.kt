@@ -5,7 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ict.ryokon.shugakuryokon2018.databinding.RowRollCallTargetSettingBinding
 
-class RollCallTargetSettingViewHolder(private val binding: RowRollCallTargetSettingBinding) : RecyclerView.ViewHolder(binding.root) {
+class RollCallTargetSettingViewHolder(
+    private val binding: RowRollCallTargetSettingBinding
+) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(bindingModel: RollCallTargetSettingBindingModel) {
         binding.bindingmodel = bindingModel

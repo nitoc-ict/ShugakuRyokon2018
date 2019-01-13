@@ -22,7 +22,10 @@ class RollCallAdapter(private val userDataList: ObservableArrayList<UserData>) :
                     positionStart: Int,
                     itemCount: Int
                 ) {
-                    notifyItemRangeRemoved(positionStart, itemCount)
+                    notifyItemRangeRemoved(
+                        positionStart,
+                        itemCount
+                    )
                 }
 
                 override fun onItemRangeMoved(
