@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/cancel"
                 android:textColor="@{viewmodel.changeable ? @color/colorCancelText : @color/colorSubText}"
+                android:onClick="@{viewmodel::cancelOnClick}"
                 app:layout_constraintTop_toBottomOf="@id/minor_editText"
                 android:layout_marginTop="49dp"
                 app:layout_constraintEnd_toStartOf="@id/button_start"
