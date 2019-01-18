@@ -4,7 +4,7 @@
             "outputFile": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/mitohato14/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/983de9992cf88fbf67bea45a5301b7b5/res/values-v16/values-v16.xml",
+                    "source": "/Users/mitohato14/.gradle/caches/transforms-2/files-2.1/48245d5ba25ee13de79eed7549c40ad9/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mitohato14/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.1.aar/a403ec932994bfe683f811d607f5c22f/res/values-v16/values-v16.xml",
+                    "source": "/Users/mitohato14/.gradle/caches/transforms-2/files-2.1/4f977dcc34e78e1bdf888bde9c4055ec/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

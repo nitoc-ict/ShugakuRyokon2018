@@ -4,8 +4,24 @@
         "source": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/res/layout/fragment_roll_call_target_setting.xml"
     },
     {
+        "merged": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_beacon_user_list.xml",
+        "source": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/res/layout/row_beacon_user_list.xml"
+    },
+    {
+        "merged": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_beacon_user_list.xml",
+        "source": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/res/layout/fragment_beacon_user_list.xml"
+    },
+    {
         "merged": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_roll_call.xml",
         "source": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/res/layout/fragment_roll_call.xml"
+    },
+    {
+        "merged": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_roll_call.xml",
+        "source": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/res/layout/row_roll_call.xml"
+    },
+    {
+        "merged": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_roll_call_target_setting.xml",
+        "source": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/src/main/res/layout/row_roll_call_target_setting.xml"
     },
     {
         "merged": "/Users/mitohato14/.ghq/github.com/mitohato/ShugakuRyokon2018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_beacon_setting.xml",
