@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tool="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="userdata" type="com.ict.ryokon.shugakuryokon2018.model.UserData"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/attend_num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="0"
+                android:text="@{userdata.attendanceNumber.value.toString()}"
+                android:textColor="@color/colorMainText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="@dimen/row_beacon_user_list_base_margin"/>
+
+        <TextView
+                android:id="@+id/main_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="歩下 太郎"
+                android:text="@{userdata.name.kanji}"
+                android:textColor="@color/colorMainText"
+                app:layout_constraintStart_toEndOf="@id/attend_num_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="@dimen/row_beacon_user_list_base_margin"/>
+
+        <TextView
+                android:id="@+id/sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="ほげ たろう"
+                android:text="@{userdata.name.hiragana}"
+                android:textColor="@color/colorSubText"
+                app:layout_constraintStart_toEndOf="@id/main_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="@dimen/row_beacon_user_list_base_margin"/>
+
+        <TextView
+                android:id="@+id/minor_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="0"
+                android:text="@{userdata.minor.value.toString()}"
+                android:textColor="@color/colorMainText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/row_beacon_user_list_base_margin"/>
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/colorListLine"
+                android:contentDescription="@string/line"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable name="userdata" type="com.ict.ryokon.shugakuryokon2018.model.UserData"/>
+        <variable name="bindingmodel"
+                  type="com.ict.ryokon.shugakuryokon2018.ui.setting.target.RollCallTargetSettingBindingModel"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/attend_num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="00"
+                android:text="@{bindingmodel.userData.attendanceNumber.value.toString()}"
+                android:textColor="@color/colorMainText"
+                android:layout_margin="@dimen/row_roll_call_base_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_text"
+                tool:text="歩下 太郎"
+                android:text="@{bindingmodel.userData.name.kanji}"
+                android:textColor="@color/colorMainText"
+                android:layout_margin="@dimen/row_roll_call_base_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/attend_num_text"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+                android:id="@+id/sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="ほげ たろう"
+                android:text="@{bindingmodel.userData.name.hiragana}"
+                android:textColor="@color/colorSubText"
+                android:layout_margin="@dimen/row_roll_call_base_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/main_text"/>
+
+        <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/target_switch"
+                android:onCheckedChanged="@{bindingmodel::onCheckedChanged}"
+                android:checked="@{bindingmodel.userData.rollCallTarget}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/colorListLine"
+                android:contentDescription="@string/line"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

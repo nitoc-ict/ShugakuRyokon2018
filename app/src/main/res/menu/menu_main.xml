@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/roll_call_target_setting"
+            android:title="@string/menu_roll_call_target_setting"/>
+    <item
+            android:id="@+id/beacon_setting"
+            android:title="@string/menu_beacon_setting"/>
+</menu>

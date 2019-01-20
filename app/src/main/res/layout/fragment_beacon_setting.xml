@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+        <variable name="adapter" type="com.ict.ryokon.shugakuryokon2018.model.UserData"/>
+        <variable name="viewmodel" type="com.ict.ryokon.shugakuryokon2018.ui.setting.beacon.BeaconSettingViewModel"/>
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+        <EditText
+                android:id="@+id/minor_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="@{viewmodel.userdata.minor.value.toString()}"
+                android:onTextChanged="@{viewmodel::onMinorChanged}"
+                android:hint="@string/minor"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="112dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:autofillHints="@string/minor"
+                tools:targetApi="o"/>
+
+        <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textColor="@{viewmodel.changeable ? @color/colorCancelText : @color/colorSubText}"
+                android:onClick="@{viewmodel::cancelOnClick}"
+                app:layout_constraintTop_toBottomOf="@id/minor_editText"
+                android:layout_marginTop="49dp"
+                app:layout_constraintEnd_toStartOf="@id/button_start"
+                android:layout_marginEnd="16dp"/>
+        <Button
+                android:id="@+id/button_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:textColor="@{viewmodel.changeable ? @color/colorAccent : @color/colorSubText}"
+                android:onClick="@{viewmodel::changeOnClick}"
+                app:layout_constraintTop_toBottomOf="@id/minor_editText"
+                android:layout_marginTop="49dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
+
