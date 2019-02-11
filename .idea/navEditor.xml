@@ -3,69 +3,6 @@
   <component name="navEditor-manualLayoutAlgorithm2">
     <option name="myPositions">
       <map>
-<<<<<<< HEAD
-        <entry key="beacon_navigation.xml">
-=======
-        <entry key="debug_roll_call_target.xml">
->>>>>>> Add debug for roll call target
-          <value>
-            <LayoutPositions>
-              <option name="myPositions">
-                <map>
-<<<<<<< HEAD
-                  <entry key="beaconSettingFragment2">
-                    <value>
-                      <LayoutPositions />
-                    </value>
-                  </entry>
-                  <entry key="beaconUserListFragment2">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_beaconUserListFragment2_to_beaconSettingFragment2">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-=======
-                  <entry key="rollCallTargetSettingFragment2">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="40" />
-                            <option name="y" value="40" />
-                          </Point>
->>>>>>> Add debug for roll call target
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </LayoutPositions>
-          </value>
-        </entry>
-<<<<<<< HEAD
-        <entry key="debug_roll_call_target.xml">
-          <value>
-            <LayoutPositions>
-              <option name="myPositions">
-                <map>
-                  <entry key="rollCallTargetSettingFragment2">
-                    <value>
-                      <LayoutPositions />
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </LayoutPositions>
-          </value>
-        </entry>
-=======
->>>>>>> Add debug for roll call target
         <entry key="navigation.xml">
           <value>
             <LayoutPositions>
@@ -76,8 +13,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="564" />
-                            <option name="y" value="314" />
+                            <option name="x" value="256" />
+                            <option name="y" value="436" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -97,8 +34,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="275" />
-                            <option name="y" value="326" />
+                            <option name="x" value="12" />
+                            <option name="y" value="368" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -123,8 +60,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-67" />
-                            <option name="y" value="124" />
+                            <option name="x" value="256" />
+                            <option name="y" value="46" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -149,7 +86,7 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="265" />
+                            <option name="x" value="12" />
                             <option name="y" value="12" />
                           </Point>
                         </option>
